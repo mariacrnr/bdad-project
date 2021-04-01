@@ -34,7 +34,7 @@ create table Pessoa (
     BI INTEGER PRIMARY KEY,
     nome TEXT NOT NULL,
     idade INTEGER NOT NULL CONSTRAINT Maioridade CHECK (idade >= 18),
-    nrTelemovel INTEGER,
+    nrTelemovel INTEGER
 );
 
 create table Discoteca (
@@ -50,7 +50,7 @@ create table Membro (
     BI INTEGER NOT NULL REFERENCES Pessoa,
     idDiscoteca INTEGER NOT NULL REFERENCES Discoteca,
     nrMembro INTEGER NOT NULL UNIQUE,
-    tipo TEXT CONSTRAINT tipoMembro CHECK (tipo in ('regular','VIP')),
+    tipo TEXT CONSTRAINT TipoMembroInvalido CHECK (tipo in ('regular','VIP')),
     PRIMARY KEY (BI, idDiscoteca)
 );
 
@@ -58,14 +58,14 @@ create table Reserva (
     id INTEGER PRIMARY KEY,
     dia TEXT NOT NULL, 
     hora TEXT NOT NULL,
-    nrGarrafas INTEGER DEFAULT 0 CONSTRAINT  CHECK (nrGarrafas >= 0),
-    nrSofas INTEGER DEFAULT 0 CHECK (nrSofas >= 0 and nrSofas <= 5),
+    nrGarrafas INTEGER DEFAULT 0 CONSTRAINT NrGarrafasForaLimite CHECK (nrGarrafas >= 0),
+    nrSofas INTEGER DEFAULT 0 CONSTRAINT NrSofasForaLimite CHECK (nrSofas >= 0 and nrSofas <= 5),
     BI INTEGER NOT NULL REFERENCES Pessoa
 );
 
 create table Lounge (
     id INTEGER PRIMARY KEY,
-    areaEspaco REAL CHECK (areaEspaco > 0),
+    areaEspaco REAL CONSTRAINT AreaEspacoForaLimite CHECK (areaEspaco > 0),
     idDiscoteca INTEGER NOT NULL REFERENCES Discoteca
 );
 
@@ -77,16 +77,16 @@ create table ReservaLounge (
 
 create table CaixasPagamento (
     id INTEGER PRIMARY KEY,
-    areaEspaco REAL CHECK (areaEspaco > 0),
+    areaEspaco REAL CONSTRAINT AreaEspacoForaLimite CHECK (areaEspaco > 0),
     dinheiroCaixa REAL NOT NULL,
     idDiscoteca INTEGER NOT NULL REFERENCES Discoteca
 );
 
 create table Bengaleiro (
     id INTEGER PRIMARY KEY,
-    areaEspaco REAL CHECK (areaEspaco > 0),
-    nrMaxCasacos INTEGER NOT NULL CHECK (nrMaxCasacos > 0),
-    precoCasaco REAL NOT NULL CHECK (precoCasaco >= 0),
+    areaEspaco REAL CONSTRAINT AreaEspacoForaLimite CHECK (areaEspaco > 0),
+    nrMaxCasacos INTEGER NOT NULL CONSTRAINT NrMaxCasacosForaLimite CHECK (nrMaxCasacos > 0),
+    precoCasaco REAL NOT NULL CONSTRAINT PrecoCasacoForaLimite CHECK (precoCasaco >= 0),
     idDiscoteca INTEGER NOT NULL REFERENCES Discoteca    
 );
 
@@ -94,7 +94,7 @@ create table Pista (
     id INTEGER PRIMARY KEY,
     nome TEXT NOT NULL,
     areaEspaco REAL CHECK(areaEspaco > 0),
-    generoMusica TEXT CHECK(generoMusica in ('funk', 'trance', 'house','90s', 'kizomba', 'reggaeton')), 
+    generoMusica TEXT CONSTRAINT GeneroMusicaInvalido CHECK(generoMusica in ('funk', 'trance', 'house','90s', 'kizomba', 'reggaeton')), 
     residente INTEGER REFERENCES Artista UNIQUE,
     idDiscoteca INTEGER NOT NULL REFERENCES Discoteca,
     UNIQUE (nome, idDiscoteca)
@@ -105,7 +105,7 @@ create table Artista (
     nome TEXT NOT NULL,
     nrTelemovel INTEGER NOT NULL,
     cache INTEGER,
-    tipo TEXT CHECK (tipo in ('convidado','residente'))
+    tipo TEXT CONSTRAINT TipoArtistaInvalido CHECK (tipo in ('convidado','residente'))
 ); 
 
 create table Atuacao (
@@ -113,7 +113,7 @@ create table Atuacao (
     idPista INTEGER NOT NULL REFERENCES Pista,
     horaComeco TEXT NOT NULL,
     horaFim TEXT NOT NULL,
-    duracao TEXT NOT NULL CHECK (duracao >= '00:30' AND duracao <= '04:00'),
+    duracao TEXT NOT NULL CONSTRAINT TipoArtistaInvalido CHECK (duracao >= '00:30' AND duracao <= '04:00'),
     PRIMARY KEY (idArtista, idPista)
 );
 
@@ -127,8 +127,8 @@ create table Bebida (
     marca TEXT NOT NULL,
     stock INTEGER NOT NULL CHECK (stock > 50 AND stock < 2400),
     preco REAL NOT NULL,
-    teorAlcoolico REAL NOT NULL CHECK (teorAlcoolico >= 0),
-    CHECK ((teorAlcoolico < 1.2 AND preco <= 4) OR (teorAlcoolico >= 1.2 AND preco > 4 AND preco < 50)),
+    teorAlcoolico REAL NOT NULL CONSTRAINT TeorAlcoolicoForaLimite CHECK (teorAlcoolico >= 0),
+    CONSTRAINT PrecoEmFuncaoTeor CHECK ((teorAlcoolico < 1.2 AND preco <= 4.0) OR (teorAlcoolico >= 1.2 AND preco > 4.0 AND preco < 50.0)),
     PRIMARY KEY (nome, marca)
 );
 
@@ -146,7 +146,7 @@ create table Funcionario (
     nrTelemovel INTEGER NOT NULL,
     BI INTEGER NOT NULL, 
     morada TEXT,   
-    salario INTEGER NOT NULL CHECK (salario > 665),
+    salario INTEGER NOT NULL CONSTRAINT SalarioMinimo CHECK (salario > 665),
     idDiscoteca INTEGER NOT NULL REFERENCES Discoteca,
     UNIQUE (BI,idDiscoteca)
 );
@@ -167,7 +167,7 @@ create table Seguranca (
 
 create table Bartender (
     id INTEGER REFERENCES Funcionario PRIMARY KEY,
-    nivelFormacao INTEGER NOT NULL CHECK (nivelFormacao >= 1 AND nivelFormacao <= 3)
+    nivelFormacao INTEGER NOT NULL CONSTRAINT NivelFormacaoForaLimite CHECK (nivelFormacao >= 1 AND nivelFormacao <= 3)
 );
 
 create table LoungeStaffGeral (
