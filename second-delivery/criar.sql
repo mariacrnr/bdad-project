@@ -26,7 +26,7 @@ drop table if exists LoungeStaffGeral;
 drop table if exists CaixasStaffGeral;
 drop table if exists BengaleiroStaffGeral;
 drop table if exists BarBartender;
-drop table if exists SegurancaPista;
+drop table if exists PistaSeguranca;
 
 PRAGMA foreign_keys = ON;
 
@@ -194,7 +194,7 @@ create table BarBartender (
     PRIMARY KEY (idBartender, idBar)
 );
 
-create table PistaSegurança (
+create table PistaSeguranca (
     idSeguranca INTEGER REFERENCES Seguranca,
     idPista INTEGER REFERENCES Pista,
     PRIMARY KEY (idSeguranca, idPista)
