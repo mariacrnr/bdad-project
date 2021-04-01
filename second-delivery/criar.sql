@@ -33,12 +33,12 @@ PRAGMA foreign_keys = ON;
 create table Pessoa (
     BI INTEGER PRIMARY KEY,
     nome TEXT NOT NULL,
-    idade INTEGER NOT NULL CHECK (idade >= 18),
-    nrTelemovel INTEGER
+    idade INTEGER NOT NULL CONSTRAINT Maioridade CHECK (idade >= 18),
+    nrTelemovel INTEGER,
 );
 
 create table Discoteca (
-    idDiscoteca INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     nome TEXT NOT NULL,
     localizacao TEXT NOT NULL,
     proprietario TEXT NOT NULL,
@@ -50,21 +50,21 @@ create table Membro (
     BI INTEGER NOT NULL REFERENCES Pessoa,
     idDiscoteca INTEGER NOT NULL REFERENCES Discoteca,
     nrMembro INTEGER NOT NULL UNIQUE,
-    tipo TEXT CHECK (tipo in ('regular','VIP')),
+    tipo TEXT CONSTRAINT tipoMembro CHECK (tipo in ('regular','VIP')),
     PRIMARY KEY (BI, idDiscoteca)
 );
 
 create table Reserva (
-    idReserva INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     dia TEXT NOT NULL, 
     hora TEXT NOT NULL,
-    nrGarrafas INTEGER DEFAULT 0 CHECK (nrGarrafas >= 0),
+    nrGarrafas INTEGER DEFAULT 0 CONSTRAINT  CHECK (nrGarrafas >= 0),
     nrSofas INTEGER DEFAULT 0 CHECK (nrSofas >= 0 and nrSofas <= 5),
     BI INTEGER NOT NULL REFERENCES Pessoa
 );
 
 create table Lounge (
-    idLounge INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     areaEspaco REAL CHECK (areaEspaco > 0),
     idDiscoteca INTEGER NOT NULL REFERENCES Discoteca
 );
@@ -76,14 +76,14 @@ create table ReservaLounge (
 );
 
 create table CaixasPagamento (
-    idCaixa INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     areaEspaco REAL CHECK (areaEspaco > 0),
     dinheiroCaixa REAL NOT NULL,
     idDiscoteca INTEGER NOT NULL REFERENCES Discoteca
 );
 
 create table Bengaleiro (
-    idBengaleiro INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     areaEspaco REAL CHECK (areaEspaco > 0),
     nrMaxCasacos INTEGER NOT NULL CHECK (nrMaxCasacos > 0),
     precoCasaco REAL NOT NULL CHECK (precoCasaco >= 0),
@@ -91,7 +91,7 @@ create table Bengaleiro (
 );
 
 create table Pista (
-    idPista INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     nome TEXT NOT NULL,
     areaEspaco REAL CHECK(areaEspaco > 0),
     generoMusica TEXT CHECK(generoMusica in ('funk', 'trance', 'house','90s', 'kizomba', 'reggaeton')), 
@@ -101,7 +101,7 @@ create table Pista (
 );
 
 create table Artista (
-    idArtista INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     nome TEXT NOT NULL,
     nrTelemovel INTEGER NOT NULL,
     cache INTEGER,
@@ -118,7 +118,7 @@ create table Atuacao (
 );
 
 create table Bar (
-    idBar INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     idPista INTEGER REFERENCES Pista
 );
 
@@ -141,7 +141,7 @@ create table BarBebida (
 );
 
 create table Funcionario (
-    idFuncionario INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     nome TEXT NOT NULL,
     nrTelemovel INTEGER NOT NULL,
     BI INTEGER NOT NULL, 
@@ -157,16 +157,16 @@ create table Hierarquia (
 );
 
 create table StaffGeral(
-    idStaff INTEGER REFERENCES Funcionario PRIMARY KEY
+    id INTEGER REFERENCES Funcionario PRIMARY KEY
 );
 
 create table Seguranca (
-    idSeguranca INTEGER REFERENCES Funcionario PRIMARY KEY,
+    id INTEGER REFERENCES Funcionario PRIMARY KEY,
     licenca INT NOT NULL UNIQUE
 );
 
 create table Bartender (
-    idBartender INTEGER REFERENCES Funcionario PRIMARY KEY,
+    id INTEGER REFERENCES Funcionario PRIMARY KEY,
     nivelFormacao INTEGER NOT NULL CHECK (nivelFormacao >= 1 AND nivelFormacao <= 3)
 );
 
