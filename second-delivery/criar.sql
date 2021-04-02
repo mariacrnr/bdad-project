@@ -31,95 +31,118 @@ drop table if exists PistaSeguranca;
 PRAGMA foreign_keys = ON;
 
 create table Pessoa (
-    BI INTEGER NOT NULL PRIMARY KEY,
+    BI INTEGER NOT NULL,
     nome TEXT NOT NULL,
     idade INTEGER NOT NULL CONSTRAINT Maioridade CHECK (idade >= 18),
-    nrTelemovel INTEGER
+    nrTelemovel INTEGER NrTelemovelInvalido CHECK ((nrTelemovel >= 910000000 AND nrTelemovel <= 939999999) OR (nrTelemovel >= 960000000 AND nrTelemovel <= 969999999)),
+    PRIMARY KEY (BI)
 );
 
 create table Discoteca (
-    id INTEGER NOT NULL PRIMARY KEY,
+    id INTEGER NOT NULL,
     nome TEXT NOT NULL,
     localizacao TEXT NOT NULL,
     proprietario TEXT NOT NULL,
     areaTotal REAL,
-    UNIQUE (nome, localizacao)
+    UNIQUE (nome, localizacao),
+    PRIMARY KEY (id)
 );
 
 create table Membro (
-    BI INTEGER NOT NULL REFERENCES Pessoa,
-    idDiscoteca INTEGER NOT NULL REFERENCES Discoteca,
-    nrMembro INTEGER NOT NULL UNIQUE,
+    BI INTEGER NOT NULL REFERENCES Pessoa 
+                        ON DELETE CASCADE ON UPDATE CASCADE,
+    idDiscoteca INTEGER NOT NULL REFERENCES Discoteca 
+                                    ON DELETE CASCADE ON UPDATE CASCADE,
+    nrMembro INTEGER NOT NULL,
     tipo TEXT CONSTRAINT TipoMembroInvalido CHECK (tipo in ('regular','VIP')),
+    UNIQUE KEY (nrMembro, idDiscoteca),
     PRIMARY KEY (BI, idDiscoteca)
 );
 
 create table Reserva (
-    id INTEGER NOT NULL PRIMARY KEY,
+    id INTEGER NOT NULL,
     dia TEXT NOT NULL, 
     hora TEXT NOT NULL,
     nrGarrafas INTEGER DEFAULT 0 CONSTRAINT NrGarrafasForaLimite CHECK (nrGarrafas >= 0),
     nrSofas INTEGER DEFAULT 0 CONSTRAINT NrSofasForaLimite CHECK (nrSofas >= 0 and nrSofas <= 5),
-    BI INTEGER NOT NULL REFERENCES Pessoa
+    BI INTEGER NOT NULL REFERENCES Pessoa 
+                        ON DELETE SET NULL ON UPDATE CASCADE,
+    PRIMARY KEY (id)
 );
 
 create table Lounge (
-    id INTEGER NOT NULL PRIMARY KEY,
+    id INTEGER NOT NULL,
     areaEspaco REAL CONSTRAINT AreaEspacoForaLimite CHECK (areaEspaco > 0),
-    idDiscoteca INTEGER NOT NULL REFERENCES Discoteca
+    idDiscoteca INTEGER NOT NULL REFERENCES Discoteca 
+                                ON DELETE CASCADE ON UPDATE CASCADE,
+    PRIMARY KEY (id)
 );
 
 create table ReservaLounge (
-    idReserva INTEGER NOT NULL REFERENCES Reserva,
-    idLounge INTEGER NOT NULL REFERENCES Lounge,
+    idReserva INTEGER NOT NULL REFERENCES Reserva
+                                ON DELETE CASCADE ON UPDATE CASCADE,
+    idLounge INTEGER NOT NULL REFERENCES Lounge
+                                ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (idReserva, idLounge)
 );
 
 create table CaixasPagamento (
-    id INTEGER NOT NULL PRIMARY KEY,
+    id INTEGER NOT NULL,
     areaEspaco REAL CONSTRAINT AreaEspacoForaLimite CHECK (areaEspaco > 0),
     dinheiroCaixa REAL NOT NULL,
-    idDiscoteca INTEGER NOT NULL REFERENCES Discoteca
+    idDiscoteca INTEGER NOT NULL REFERENCES Discoteca 
+                                ON DELETE CASCADE ON UPDATE CASCADE,
+    PRIMARY KEY (id)
 );
 
 create table Bengaleiro (
-    id INTEGER NOT NULL PRIMARY KEY,
+    id INTEGER NOT NULL,
     areaEspaco REAL CONSTRAINT AreaEspacoForaLimite CHECK (areaEspaco > 0),
     nrMaxCasacos INTEGER NOT NULL CONSTRAINT NrMaxCasacosForaLimite CHECK (nrMaxCasacos > 0),
     precoCasaco REAL NOT NULL CONSTRAINT PrecoCasacoForaLimite CHECK (precoCasaco >= 0),
-    idDiscoteca INTEGER NOT NULL REFERENCES Discoteca    
-);
-
-create table Pista (
-    id INTEGER NOT NULL PRIMARY KEY,
-    nome TEXT NOT NULL,
-    areaEspaco REAL CHECK(areaEspaco > 0),
-    generoMusica TEXT CONSTRAINT GeneroMusicaInvalido CHECK(generoMusica in ('funk', 'trance', 'house','90s', 'kizomba', 'reggaeton')), 
-    residente INTEGER REFERENCES Artista UNIQUE,
-    idDiscoteca INTEGER NOT NULL REFERENCES Discoteca,
-    UNIQUE (nome, idDiscoteca)
+    idDiscoteca INTEGER NOT NULL REFERENCES Discoteca 
+                                ON DELETE CASCADE ON UPDATE CASCADE,
+    PRIMARY KEY (id)
 );
 
 create table Artista (
-    id INTEGER NOT NULL PRIMARY KEY,
+    id INTEGER NOT NULL,
     nome TEXT NOT NULL,
-    nrTelemovel INTEGER NOT NULL,
+    nrTelemovel INTEGER NOT NULL CONSTRAINT NrTelemovelInvalido CHECK((nrTelemovel >= 910000000 AND nrTelemovel <= 939999999) OR (nrTelemovel >= 960000000 AND nrTelemovel <= 969999999)),
     cache INTEGER,
-    tipo TEXT CONSTRAINT TipoArtistaInvalido CHECK (tipo in ('convidado','residente'))
+    tipo TEXT CONSTRAINT TipoArtistaInvalido CHECK (tipo in ('convidado','residente')),
+    PRIMARY KEY (id)
+); 
+
+create table Pista (
+    id INTEGER NOT NULL,
+    nome TEXT NOT NULL,
+    areaEspaco REAL CHECK (areaEspaco > 0),
+    generoMusica TEXT CONSTRAINT GeneroMusicaInvalido CHECK (generoMusica in ('funk', 'trance', 'house','90s', 'kizomba', 'reggaeton')), 
+    idResidente INTEGER UNIQUE REFERENCES Artista 
+                        ON DELETE SET NULL ON UPDATE CASCADE,
+    idDiscoteca INTEGER NOT NULL REFERENCES Discoteca 
+                                ON DELETE CASCADE ON UPDATE CASCADE,
+    UNIQUE (nome, idDiscoteca),
+    PRIMARY KEY (id)
 ); 
 
 create table Atuacao (
-    idArtista INTEGER NOT NULL REFERENCES Artista,
-    idPista INTEGER NOT NULL REFERENCES Pista,
+    idArtista INTEGER NOT NULL REFERENCES Artista 
+                                ON DELETE CASCADE ON UPDATE CASCADE,
+    idPista INTEGER NOT NULL REFERENCES Pista 
+                                ON DELETE SET NULL ON UPDATE CASCADE,
     horaComeco TEXT NOT NULL,
     horaFim TEXT NOT NULL,
-    duracao TEXT NOT NULL CONSTRAINT TipoArtistaInvalido CHECK (duracao >= '00:30' AND duracao <= '04:00'),
+    duracao TEXT NOT NULL CONSTRAINT DuracaoForaLimite CHECK (duracao >= '00:30' AND duracao <= '04:00'),
     PRIMARY KEY (idArtista, idPista)
 );
 
 create table Bar (
-    id INTEGER NOT NULL PRIMARY KEY,
-    idPista INTEGER REFERENCES Pista
+    id INTEGER NOT NULL,
+    idPista INTEGER REFERENCES Pista 
+                    ON DELETE SET NULL ON UPDATE CASCADE,
+    PRIMARY KEY (id)                
 );
 
 create table Bebida (
@@ -133,69 +156,92 @@ create table Bebida (
 );
 
 create table BarBebida (
-    idBar INTEGER NOT NULL REFERENCES Bar,
+    idBar INTEGER NOT NULL REFERENCES Bar 
+                            ON DELETE CASCADE ON UPDATE CASCADE,
     nome TEXT NOT NULL,
     marca TEXT NOT NULL,
-    FOREIGN KEY (nome, marca) REFERENCES Bebida,
+    FOREIGN KEY (nome, marca) REFERENCES Bebida
+                                ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (idBar, nome, marca)
 );
 
 create table Funcionario (
-    id INTEGER NOT NULL PRIMARY KEY,
+    id INTEGER NOT NULL,
     nome TEXT NOT NULL,
-    nrTelemovel INTEGER NOT NULL,
+    nrTelemovel INTEGER NOT NULL CONSTRAINT NrTelemovelInvalido CHECK((nrTelemovel >= 910000000 AND nrTelemovel <= 939999999) OR (nrTelemovel >= 960000000 AND nrTelemovel <= 969999999)),
     BI INTEGER NOT NULL, 
     morada TEXT,   
     salario INTEGER NOT NULL CONSTRAINT SalarioMinimo CHECK (salario > 665),
-    idDiscoteca INTEGER NOT NULL REFERENCES Discoteca,
-    UNIQUE (BI,idDiscoteca)
+    idDiscoteca INTEGER NOT NULL REFERENCES Discoteca 
+                                ON DELETE CASCADE ON UPDATE CASCADE,
+    UNIQUE (BI,idDiscoteca),
+    PRIMARY KEY (id)
 );
 
 create table Hierarquia (
-    idSubalterno INTEGER NOT NULL REFERENCES Funcionario PRIMARY KEY,
-    idGerente INTEGER NOT NULL REFERENCES Funcionario
+    idSubalterno INTEGER NOT NULL REFERENCES Funcionario
+                                    ON DELETE CASCADE ON UPDATE CASCADE,
+    idGerente INTEGER NOT NULL REFERENCES Funcionario 
+                                ON DELETE CASCADE ON UPDATE CASCADE,
+    PRIMARY KEY (idSubalterno)                            
 );
 
 create table StaffGeral(
-    id INTEGER NOT NULL REFERENCES Funcionario PRIMARY KEY
+    id INTEGER NOT NULL REFERENCES Funcionario  
+                                    ON DELETE CASCADE ON UPDATE CASCADE,
+    PRIMARY KEY (id)                                
 );
 
 create table Seguranca (
-    id INTEGER NOT NULL REFERENCES Funcionario PRIMARY KEY,
-    licenca INT NOT NULL UNIQUE
+    id INTEGER NOT NULL REFERENCES Funcionario
+                                    ON DELETE CASCADE ON UPDATE CASCADE,
+    licenca INT NOT NULL UNIQUE,
+    PRIMARY KEY (id)
 );
 
 create table Bartender (
-    id INTEGER NOT NULL REFERENCES Funcionario PRIMARY KEY,
-    nivelFormacao INTEGER NOT NULL CONSTRAINT NivelFormacaoForaLimite CHECK (nivelFormacao >= 1 AND nivelFormacao <= 3)
+    id INTEGER NOT NULL REFERENCES Funcionario 
+                                    ON DELETE CASCADE ON UPDATE CASCADE,
+    nivelFormacao INTEGER NOT NULL CONSTRAINT NivelFormacaoForaLimite CHECK (nivelFormacao >= 1 AND nivelFormacao <= 3),
+    PRIMARY KEY (id)
 );
 
 create table LoungeStaffGeral (
-    idStaff INTEGER NOT NULL REFERENCES StaffGeral,
-    idLounge INTEGER NOT NULL REFERENCES Lounge,
+    idStaff INTEGER NOT NULL REFERENCES StaffGeral
+                            ON DELETE CASCADE ON UPDATE CASCADE,
+    idLounge INTEGER NOT NULL REFERENCES Lounge 
+                            ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (idStaff, idLounge)
 );
 
 create table CaixasStaffGeral (
-    idStaff INTEGER NOT NULL REFERENCES Staff,
-    idCaixa INTEGER NOT NULL REFERENCES CaixasPagamento,
+    idStaff INTEGER NOT NULL REFERENCES StaffGeral
+                            ON DELETE CASCADE ON UPDATE CASCADE,
+    idCaixa INTEGER NOT NULL REFERENCES CaixasPagamento
+                            ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (idStaff, idCaixa)
 );
 
 create table BengaleiroStaffGeral (
-    idStaff INTEGER NOT NULL REFERENCES Staff,
-    idBengaleiro INTEGER NOT NULL REFERENCES Bengaleiro,
+    idStaff INTEGER NOT NULL REFERENCES StaffGeral 
+                            ON DELETE CASCADE ON UPDATE CASCADE,
+    idBengaleiro INTEGER NOT NULL REFERENCES Bengaleiro 
+                                    ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (idStaff, idBengaleiro)
 );
 
 create table BarBartender (
-    idBartender INTEGER NOT NULL REFERENCES Bartender,
-    idBar INTEGER NOT NULL REFERENCES Bar,   
+    idBartender INTEGER NOT NULL REFERENCES Bartender 
+                                ON DELETE CASCADE ON UPDATE CASCADE,
+    idBar INTEGER NOT NULL REFERENCES Bar 
+                            ON DELETE CASCADE ON UPDATE CASCADE,   
     PRIMARY KEY (idBartender, idBar)
 );
 
 create table PistaSeguranca (
-    idSeguranca INTEGER NOT NULL REFERENCES Seguranca,
-    idPista INTEGER NOT NULL REFERENCES Pista,
+    idSeguranca INTEGER NOT NULL REFERENCES Seguranca
+                                ON DELETE CASCADE ON UPDATE CASCADE,
+    idPista INTEGER NOT NULL REFERENCES Pista
+                                ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (idSeguranca, idPista)
 );
