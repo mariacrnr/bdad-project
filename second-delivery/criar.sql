@@ -31,7 +31,7 @@ drop table if exists PistaSeguranca;
 PRAGMA foreign_keys = ON;
 
 create table Pessoa (
-    BI INTEGER NOT NULL,
+    BI INTEGER NOT NULL CONSTRAINT BIInvalido CHECK ( BI <= 99999999),
     nome TEXT NOT NULL,
     idade INTEGER NOT NULL CONSTRAINT Maioridade CHECK (idade >= 18),
     nrTelemovel INTEGER NrTelemovelInvalido CHECK ((nrTelemovel >= 910000000 AND nrTelemovel <= 939999999) OR (nrTelemovel >= 960000000 AND nrTelemovel <= 969999999)),
@@ -169,7 +169,7 @@ create table Funcionario (
     id INTEGER NOT NULL,
     nome TEXT NOT NULL,
     nrTelemovel INTEGER NOT NULL CONSTRAINT NrTelemovelInvalido CHECK((nrTelemovel >= 910000000 AND nrTelemovel <= 939999999) OR (nrTelemovel >= 960000000 AND nrTelemovel <= 969999999)),
-    BI INTEGER NOT NULL, 
+    BI INTEGER NOT NULL CONSTRAINT BIInvalido CHECK ( BI <= 99999999), 
     morada TEXT,   
     salario INTEGER NOT NULL CONSTRAINT SalarioMinimo CHECK (salario > 665),
     idDiscoteca INTEGER NOT NULL REFERENCES Discoteca 
