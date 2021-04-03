@@ -26,9 +26,9 @@ INSERT INTO Pessoa (BI, nome, idade, nrTelemovel) VALUES
 (34959324, 'José Carlos Faria', 38, 935321563),
 (12547856, 'Joana Reis', 35, 912345786);
 
-INSERT INTO Discoteca (id, nome, localizacao, proprietario, areaTotal) VALUES
-(1, 'Forte S.João', 'Póvoa de Varzim', 'Sérgio Magalhães', 1000.0),
-(2, 'Pacha', 'Ofir', 'José Vieira', 7500.0);
+INSERT INTO Discoteca (nome, localizacao, proprietario, areaTotal) VALUES
+('Forte S.João', 'Póvoa de Varzim', 'Sérgio Magalhães', 1000.0),
+('Pacha', 'Ofir', 'José Vieira', 7500.0);
 
 INSERT INTO Membro (BI, idDiscoteca, nrMembro, tipo) VALUES 
 (14693657, 1, 1, 'VIP'),
@@ -59,34 +59,35 @@ INSERT INTO Membro (BI, idDiscoteca, nrMembro, tipo) VALUES
 (34959324, 2, 12, 'regular'),
 (12547856, 2, 13, 'VIP');
 
-INSERT INTO Reserva (id, dia, hora, nrGarrafas, nrSofas, BI) VALUES 
-(1, '31-03-2020', '23:00', 5, 2, 14693657);
+INSERT INTO Reserva (dia, hora, nrGarrafas, nrSofas, BI) VALUES 
+('31-03-2020', '23:00', 5, 2, 14693657),
+('21-03-2020', '10:00', 5, 2, 14693659);
 
-INSERT INTO Lounge (id, areaEspaco, idDiscoteca) VALUES 
-(1, 400.0, 1);
+INSERT INTO Lounge (areaEspaco, idDiscoteca) VALUES 
+(400.0, 1);
 
 INSERT INTO ReservaLounge (idReserva, idLounge) VALUES
-(1,1);
+(1, 1);
 
-INSERT INTO CaixasPagamento (id, areaEspaco, dinheiroCaixa, idDiscoteca) VALUES
-(1, 30.0, 0.0, 1);
+INSERT INTO CaixasPagamento (areaEspaco, dinheiroCaixa, idDiscoteca) VALUES
+(30.0, 0.0, 1);
 
-INSERT INTO Bengaleiro (id, areaEspaco, nrMaxCasacos, precoCasaco, idDiscoteca) VALUES
-(1, 30.0, 400, 3.5, 1);
+INSERT INTO Bengaleiro (areaEspaco, nrMaxCasacos, precoCasaco, idDiscoteca) VALUES
+(30.0, 400, 3.5, 1);
 
-INSERT INTO Artista (id, nome, nrTelemovel, cache, tipo) VALUES
-(1, 'Gala', 934564568, 3000, 'residente'),
-(2, 'Spice Girls', 917523345, 2500, 'convidado');
+INSERT INTO Artista (nome, nrTelemovel, cache, tipo) VALUES
+('Gala', 934564568, 3000, 'residente'),
+('Spice Girls', 917523345, 2500, 'convidado');
 
-INSERT INTO Pista (id, nome, areaEspaco, generoMusica, idResidente, idDiscoteca) VALUES
-(1, 'Old but Gold', 300.0, '90s', 1, 1);
+INSERT INTO Pista (nome, areaEspaco, generoMusica, idResidente, idDiscoteca) VALUES
+('Old but Gold', 300.0, '90s', 1, 1);
 
 INSERT INTO Atuacao (idArtista, idPista, horaComeco, horaFim, duracao) VALUES
 (2, 1, '01:00', '03:00', '02:00');
 
-INSERT INTO Bar (id, idPista) VALUES
-(1, 1),
-(2, 1);
+INSERT INTO Bar (idPista) VALUES
+(1),
+(1);
 
 INSERT INTO Bebida (nome, marca, stock, preco, teorAlcoolico) VALUES
 ('Rum', 'Bacardi', 500, 15.0, 37.5), -- confirmar valores
@@ -97,16 +98,16 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (1, 'Rum', '151 Rum'),
 (2, 'Rum', 'Bacardi');
 
-INSERT INTO Funcionario (id, nome, nrTelemovel, BI, morada, salario, idDiscoteca) VALUES
-(1, 'Gonçalo', 961234325, 19327358, 'Rua dos Clérigos, Povóa de Varzim', 800, 1),
-(2, 'Marlene', 917737123, 12233745, 'Avenida dos Banhos, Viana do Castelo', 700, 1),
-(3, 'Rita', 921478781, 14745587, 'Rua da Costa Nova, Viana do Castelo', 700, 1),
-(4, 'Leonor', 918734561, 14562943, 'Travessa dos Santos, Guimarães', 1000, 1),
-(5, 'Rafael', 933384731, 18354932, 'Avenida da Boavista, Porto', 900, 1);
+INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VALUES
+('Gonçalo', 961234325, 19327358, 'Rua dos Clérigos, Póvoa de Varzim', 800, 1),
+('Marlene', 917737123, 12233745, 'Avenida dos Banhos, Viana do Castelo', 1300, 1),
+('Rita', 921478781, 14745587, 'Rua da Costa Nova, Viana do Castelo', 700, 1),
+('Leonor', 918734561, 14562943, 'Travessa dos Santos, Guimarães', 1000, 1),
+('Rafael', 933384731, 18354932, 'Avenida da Boavista, Porto', 900, 1);
 
 INSERT INTO Hierarquia (idSubalterno, idGerente) VALUES
-(1,2),
-(3,2);
+(1, 2),
+(3, 2);
 
 INSERT INTO StaffGeral (id) VALUES
 (1),
@@ -114,25 +115,25 @@ INSERT INTO StaffGeral (id) VALUES
 (3);
 
 INSERT INTO Seguranca (id, licenca) VALUES
-(4,156875);
+(4, 156875);
 
 INSERT INTO Bartender (id, nivelFormacao) VALUES
-(5,2);
+(5, 2);
 
 INSERT INTO LoungeStaffGeral (idStaff, idLounge) VALUES
-(1,1);
+(1, 1);
 
 INSERT INTO CaixasStaffGeral (idStaff, idCaixa) VALUES
-(2,1);
+(2, 1);
 
 INSERT INTO BengaleiroStaffGeral (idStaff, idBengaleiro) VALUES
-(3,1);
+(3, 1);
 
 INSERT INTO BarBartender (idBartender, idBar) VALUES
-(5,1);
+(5, 1);
 
 INSERT INTO PistaSeguranca (idSeguranca, idPista) VALUES
-(4,1);
+(4, 1);
 
 --SELECT * FROM "Pessoa";
 --SELECT * FROM "Discoteca";

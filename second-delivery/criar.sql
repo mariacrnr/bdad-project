@@ -108,7 +108,7 @@ create table Bengaleiro (
 create table Artista (
     id INTEGER NOT NULL,
     nome TEXT NOT NULL,
-    nrTelemovel INTEGER NOT NULL CONSTRAINT NrTelemovelInvalido CHECK((nrTelemovel >= 910000000 AND nrTelemovel <= 939999999) OR (nrTelemovel >= 960000000 AND nrTelemovel <= 969999999)),
+    nrTelemovel INTEGER NOT NULL CONSTRAINT NrTelemovelInvalido CHECK ((nrTelemovel >= 910000000 AND nrTelemovel <= 939999999) OR (nrTelemovel >= 960000000 AND nrTelemovel <= 969999999)),
     cache INTEGER,
     tipo TEXT CONSTRAINT TipoArtistaInvalido CHECK (tipo in ('convidado','residente')),
     PRIMARY KEY (id)
