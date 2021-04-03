@@ -164,8 +164,9 @@ INSERT INTO Membro (BI, idDiscoteca, nrMembro, tipo) VALUES
 (15262548, 5, 14, 'regular');
 
 INSERT INTO Reserva (dia, hora, nrGarrafas, nrSofas, BI) VALUES 
---Reservas Membros Forte S. João
+--Reservas Membros VIP Forte S. João
 ('31-10-2021', '23:45', 5, 2, 14693657),
+('31-10-2021', '23:45', 3, 1, 14693657), --Reserva na mesma discoteca lounges diferentes com diferente quantidade de garrafas e sofas 
 ('21-06-2021', '10:00', 5, 2, 14693659),
 ('25-07-2021', '02:00', 1, 0, 14963658),
 ('05-07-2021', '01:30', 2, 1, 14693659),
@@ -173,7 +174,7 @@ INSERT INTO Reserva (dia, hora, nrGarrafas, nrSofas, BI) VALUES
 ('11-07-2021', '02:30', 3, 1, 15930134),
 ('15-07-2021', '02:10', 9, 4, 12994213),
 
---Reservas Membros Via Rápida 
+--Reservas Membros VIP Via Rápida 
 ('20-08-2021', '01:00', 7, 3, 14693657),
 ('14-08-2021', '00:40', 0, 0, 14963658),
 ('02-09-2021', '01:30', 0, 1, 14693659),
@@ -182,7 +183,7 @@ INSERT INTO Reserva (dia, hora, nrGarrafas, nrSofas, BI) VALUES
 ('15-10-2021', '04:20', 24, 5, 25425478),
 ('24-09-2021', '02:00', 10, 2, 12547856),
  
---Reservas Membros Pacha 
+--Reservas Membros VIP Pacha 
 ('31-10-2021', '23:45', 10, 2, 12548532),
 ('17-09-2021', '22:00', 2, 1, 14256989),
 ('03-08-2021', '01:10', 3, 1, 12364689),
@@ -192,14 +193,14 @@ INSERT INTO Reserva (dia, hora, nrGarrafas, nrSofas, BI) VALUES
 ('22-07-2021', '04:25', 17, 5, 62569797),
 ('10-12-2021', '05:00', 11, 4, 85848458),
 
---Reservas Membros Pedra do Couto
+--Reservas Membros VIP Pedra do Couto
 ('25-07-2021', '02:00', 16, 5, 14256691),
 ('20-06-2021', '01:30', 12, 2, 15422364),
 ('11-08-2021', '05:00', 10, 2, 15262548),
 ('03-11-2021', '02:00', 5, 1, 52456548),
 ('07-07-2021', '03:30', 10, 3, 65622569),
 
---Reservas Membros Gare
+--Reservas Membros VIP Gare
 ( '15-07-2021', '01:00', 1, 1, 34587458),
 ( '25-08-2021', '02:45', 4, 1, 15930134),
 ( '13-07-2021', '02:30', 5, 3, 25425478),
@@ -210,22 +211,135 @@ INSERT INTO Reserva (dia, hora, nrGarrafas, nrSofas, BI) VALUES
 INSERT INTO Lounge (areaEspaco, idDiscoteca) VALUES 
 --Lounges Forte S. João
 (100.0, 1),
-(100.0, 1);
+(100.0, 1),
+
 --Lounges Via Rápida
+(150.0, 2),
+(150.0, 2),
+(150.0, 2),
+
 --Lounges Pacha
+(200.0, 3),
+(200.0, 3),
+(300.0, 3),
+(100.0, 3),
+(100.0, 3),
+(100.0, 3),
+
 --Lounges Pedra do Couto
+(200.0, 4),
+(200.0, 4),
+(100.0, 4),
+(100.0, 4),
+
 --Lounges Gare
+(50.0, 5),
+(25.0, 5);
 
 INSERT INTO ReservaLounge (idReserva, idLounge) VALUES
+--Reservas Lounges Forte S. João
 (1, 1),
-(2, 1);
+(1, 2),
+(2, 2),
+(3, 2),
+(4, 1),
+(5, 1),
+(6, 2),
+(6, 1),
+(7, 2),
+(8, 2),
+
+--Reservas Lounges Via Rápida
+(9, 3),
+(9, 4),
+(10, 3),
+(11, 4),
+(12, 5),
+(13, 4),
+(13, 5),
+(13, 3),
+(14, 5),
+(15, 5),
+
+--Reservas Lounges Pacha
+(16, 6),
+(16, 10),
+(17, 7),
+(18, 6),
+(18, 8),
+(18, 11),
+(19, 11),
+(19, 7),
+(20, 9),
+(20, 8),
+(21, 10),
+(22, 11),
+(23, 8),
+(23, 10),
+(23, 6),
+
+--Reservas Lounges Pedra do Couto
+(24,12),
+(25,13),
+(25,15),
+(26,15),
+(27,14),
+(27,13),
+(28,12),
+(28,14),
+
+--Reservas Lounges Gare
+(29,16),
+(30,16),
+(31,16),
+(31,17),
+(32,17),
+(33,16),
+(34,17);
 
 INSERT INTO CaixasPagamento (areaEspaco, dinheiroCaixa, idDiscoteca) VALUES
-(30.0, 0.0, 1);
+--Caixas Forte S. João
+(50.0, 200.0, 1),
+
+--Caixas Via Rápida
+(70.0, 300.0, 2),
+(30.0, 150.0, 2),
+
+--Caixas Pacha
+(50.0, 150.0, 3),
+(80.0, 300.0, 3),
+(50.0, 300.0, 3),
+(50.0, 200.0, 3),
+(70.0, 500.0, 3),
+
+--Caixas Pedra do Couto
+(50.0, 200.0, 4),
+(80.0, 150.0, 4),
+(70.0, 100.0, 4),
+
+--Caixas Gare
+(45.0, 100.0, 5);
 
 INSERT INTO Bengaleiro (areaEspaco, nrMaxCasacos, precoCasaco, idDiscoteca) VALUES
-(30.0, 400, 3.5, 1);
+--Bengaleiros Forte S. João
+(30.0, 300, 1.5, 1),
 
+--Bengaleiros Via Rápida
+(50.0, 500, 2.0, 2),
+
+--Bengaleiros Pacha
+(50.0, 600, 3.0, 3),
+(100.0, 800, 3.0, 3),
+(50.0, 600, 3.0, 3),
+
+--Bengaleiros Pedra do Couto
+(50.0, 600, 2.0, 4),
+(50.0, 600, 2.0, 4),
+
+--Bengaleiros Gare
+(20.0, 400, 1.5, 5);
+
+--Areas Livres para gastar nos outros espaços: Forte: 720 , VR: 1800, Pacha: 6150, Pedra: 2100, Gare: 360
 INSERT INTO Artista (nome, nrTelemovel, cache, tipo) VALUES
 ('Gala', 934564568, 3000, 'residente'),
 ('Spice Girls', 917523345, 2500, 'convidado');
