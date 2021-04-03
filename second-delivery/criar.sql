@@ -55,7 +55,7 @@ create table Membro (
                                     ON DELETE CASCADE ON UPDATE CASCADE,
     nrMembro INTEGER NOT NULL,
     tipo TEXT CONSTRAINT TipoMembroInvalido CHECK (tipo in ('regular','VIP')),
-    UNIQUE KEY (nrMembro, idDiscoteca),
+    UNIQUE (nrMembro, idDiscoteca),
     PRIMARY KEY (BI, idDiscoteca)
 );
 

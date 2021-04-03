@@ -3,27 +3,28 @@ PRAGMA foreign_keys = ON;
 INSERT INTO Pessoa (BI, nome, idade, nrTelemovel) VALUES 
 (14693657, 'Edgar Torre', 18, 936355224),
 (14963658, 'André Santos', 19, 967742069),
-(14693659, 'Maria Carneiro', 19, 935475578);
---(25475859, 'João Andrade', 25, 967478784),
---(14967659, 'Sofia Germer', 24, 935447978),
---(24957641, 'Sérgio Estêvão', 22, 915447978),
---(15377234, 'Rodrigo Tuna', 26, 925943713),
---(34587458, 'Pedro Silva', 18, 964521875),
---(15930134, 'Rafael Campos', 21, 913336344),
---(18539412, 'Ricardo Correia', 23, 969991234),
---(12994213, 'Patrícia Silva', 19, 913241242),
---(19636493, 'Marco Serra', 24, 915533254),
+(14693659, 'Maria Carneiro', 19, 935475578),
 
---(47542369, 'Margarida Lucas', 18, 912548756),
---(12456978, 'Beatriz Andreia Lopes', 22, 935478265),
---(29543593, 'Ana Leonor Valente', 26, 925433423),
---(44353213, 'Daniel Barroso', 18, 914854385),
---(25425478, 'Juliana Ferreira', 21, 924587456),
---(31231495, 'Xavier Rodrigues', 26, 919222114),
---(57457623, 'Vicente Vasconcellos', 18, 962535179),
---(31526457, 'Concha Corte-Real', 23, 912546758),
---(34959324, 'José Carlos Faria', 38, 945321563),
---(12547856, 'Joana Reis', 35, 912345786);
+(25475859, 'João Andrade', 25, 967478784),
+(14967659, 'Sofia Germer', 24, 935447978),
+(24957641, 'Sérgio Estêvão', 22, 915447978),
+(15377234, 'Rodrigo Tuna', 26, 925943713),
+(34587458, 'Pedro Silva', 18, 964521875),
+(15930134, 'Rafael Campos', 21, 913336344),
+(18539412, 'Ricardo Correia', 23, 969991234),
+(12994213, 'Patrícia Silva', 19, 913241242),
+(19636493, 'Marco Serra', 24, 915533254),
+
+(47542369, 'Margarida Lucas', 18, 912548756),
+(12456978, 'Beatriz Andreia Lopes', 22, 935478265),
+(29543593, 'Ana Leonor Valente', 26, 925433423),
+(44353213, 'Daniel Barroso', 18, 914854385),
+(25425478, 'Juliana Ferreira', 21, 924587456),
+(31231495, 'Xavier Rodrigues', 26, 919222114),
+(57457623, 'Vicente Vasconcellos', 18, 962535179),
+(31526457, 'Concha Corte-Real', 23, 912546758),
+(34959324, 'José Carlos Faria', 38, 935321563),
+(12547856, 'Joana Reis', 35, 912345786);
 
 INSERT INTO Discoteca (id, nome, localizacao, proprietario, areaTotal) VALUES
 (1, 'Forte S.João', 'Póvoa de Varzim', 'Sérgio Magalhães', 1000.0),
@@ -33,33 +34,33 @@ INSERT INTO Membro (BI, idDiscoteca, nrMembro, tipo) VALUES
 (14693657, 1, 1, 'VIP'),
 (14963658, 1, 2, 'VIP'),
 (14693659, 1, 3, 'VIP'),
---(25475859, 1, 4,'regular'),
---(14967659, 1, 5,'regular'),
---(24957641, 1, 6,'VIP'),
---(15377234, 1, 7,'regular'),
---(34587458, 1, 8,'regular'),
---(15930134, 1, 9,'VIP'),
---(18539412, 1, 10,'regular'),
---(12994213, 1, 11,'VIP'),
---(19636493, 1, 12,'regular'),
+(25475859, 1, 4,'regular'),
+(14967659, 1, 5,'regular'),
+(24957641, 1, 6,'VIP'),
+(15377234, 1, 7,'regular'),
+(34587458, 1, 8,'regular'),
+(15930134, 1, 9,'VIP'),
+(18539412, 1, 10,'regular'),
+(12994213, 1, 11,'VIP'),
+(19636493, 1, 12,'regular'),
 
 (14693657, 2, 1, 'VIP'),
 (14963658, 2, 2, 'VIP'),
-(14693659, 2, 3, 'VIP');
+(14693659, 2, 3, 'VIP'),
 
---(47542369, 2, 4, 'regular' ),
---(12456978, 2, 5, 'VIP'),
---(29543593, 2, 6, 'VIP'),
---(44353213, 2, 7, 'regular'),
---(25425478, 2, 8, 'VIP'),
---(31231495, 2, 9, 'regular'),
---(57457623, 2, 10, 'regular'),
---(31526457, 2, 11, 'regular'),
---(34959324, 2, 12, 'regular'),
---(12547856, 2, 13, 'VIP');
+(47542369, 2, 4, 'regular' ),
+(12456978, 2, 5, 'VIP'),
+(29543593, 2, 6, 'VIP'),
+(44353213, 2, 7, 'regular'),
+(25425478, 2, 8, 'VIP'),
+(31231495, 2, 9, 'regular'),
+(57457623, 2, 10, 'regular'),
+(31526457, 2, 11, 'regular'),
+(34959324, 2, 12, 'regular'),
+(12547856, 2, 13, 'VIP');
 
 INSERT INTO Reserva (id, dia, hora, nrGarrafas, nrSofas, BI) VALUES 
-(1, '31-03-2020', '23:00', 5, 2, 14963657);
+(1, '31-03-2020', '23:00', 5, 2, 14693657);
 
 INSERT INTO Lounge (id, areaEspaco, idDiscoteca) VALUES 
 (1, 400.0, 1);
