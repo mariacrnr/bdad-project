@@ -148,10 +148,10 @@ create table Bar (
 create table Bebida (
     nome TEXT NOT NULL,
     marca TEXT NOT NULL,
-    stock INTEGER NOT NULL CHECK (stock > 50 AND stock < 2400),
+    stock INTEGER NOT NULL CONSTRAINT StockForaLimite CHECK (stock > 50 AND stock < 2400),
     preco REAL NOT NULL,
     teorAlcoolico REAL NOT NULL CONSTRAINT TeorAlcoolicoForaLimite CHECK (teorAlcoolico >= 0),
-    CONSTRAINT PrecoEmFuncaoTeor CHECK ((teorAlcoolico < 1.2 AND preco <= 4.0) OR (teorAlcoolico >= 1.2 AND preco > 4.0 AND preco < 50.0)),
+    CONSTRAINT PrecoEmFuncaoTeor CHECK ((teorAlcoolico < 1.2 AND preco < 4.0) OR (teorAlcoolico >= 1.2 AND preco >= 4.0 AND preco < 50.0)),
     PRIMARY KEY (nome, marca)
 );
 

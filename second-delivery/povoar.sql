@@ -24,13 +24,65 @@ INSERT INTO Pessoa (BI, nome, idade, nrTelemovel) VALUES
 (57457623, 'Vicente Vasconcellos', 18, 962535179),
 (31526457, 'Concha Corte-Real', 23, 912546758),
 (34959324, 'José Carlos Faria', 38, 935321563),
-(12547856, 'Joana Reis', 35, 912345786);
+(12547856, 'Joana Reis', 35, 912345786),
+
+(12457484, 'Marta Ramos', 28, 914574581),
+(12457558, 'Rui Gomes', 27, 921457867),
+(32540547, 'Teresa Lima', 24, 965784875),
+(35478488, 'Raquel Moreira', 21, 932547859),
+(45124587, 'Miguel Casanova', 25, 965785871),
+(12423547, 'Inês José Silva', 18, 965847578),
+(36258747, 'António Miranda', 33, 915247896),
+(62548759, 'Manuel Sousa', 39, 925647784),
+(51246597, 'João Tavares', 25, 935458695),
+(65475847, 'Marcelo Salgado', 18, 925687487),
+(12546989, 'Mariana Arruda', 32, 923548759),
+(32545784, 'Paulo Ventos', 21, 912547887),
+(85847857, 'Lara Rios', 24, 934584785),
+
+(78485878, 'Gonçalo Gonçalves', 26, 912547589),
+(12548532, 'Nuno Martins', 19, 923658748),
+(14256989, 'Miguel Santos', 25, 965478589),
+(12452899, 'Carina Faria', 19, 912454859),
+(12545858, 'Maria Antas', 25, 932564781),
+(12364689, 'Érica Antunes', 19, 912587874),
+(56986698, 'Vitória Albuquerque', 32, 926589758),
+(12548785, 'Bárbara Silva', 34, 965875878),
+(25365489, 'Carlos Gomes', 33, 915475879),
+(56369858, 'Gustavo Lima', 31, 912458759),
+(12588999, 'Simone Rego', 25, 935758965),
+(52548898, 'Sandro Lopes', 18, 968696878),
+(62569797, 'Alexandre Walter', 19, 912547869),
+(85848458, 'Filipe Babo', 36, 965875874),
+(21245899, 'Tatiana Pires', 33, 967858747),
+(12457889, 'Yolanda Ferreira', 31, 925654785),
+
+(78485558, 'Andreia Gonçalves', 21, 932547589),
+(12548578, 'Nuno Alves', 18, 921558748),
+(14256691, 'Matilde Santos', 24, 965474589),
+(12452545, 'Ana Tavares', 19, 915487587),
+(12545845, 'Maria Antónia Rui', 28, 932548587),
+(15422364, 'Olga Ramos', 32, 912589698),
+(56984156, 'Bruno Albuquerque', 31, 926586968),
+(15262548, 'Bárbara Lopes', 36, 965874857),
+(45225365, 'Carlos Corceiro', 23, 925452879),
+(56385469, 'Joana Lima', 30, 915258568),
+(12588956, 'Tiago Marques', 27, 965458758),
+(52456548, 'Sandra Lucas', 18, 912965145),
+(65622569, 'Daniela Miguel', 19, 968658785),
+(85845668, 'Carolina Carneiro', 26, 912547587),
+(21522245, 'Glória Figueira', 35, 935785876),
+(12457153, 'Fátima Trigo', 32, 965878587);
 
 INSERT INTO Discoteca (nome, localizacao, proprietario, areaTotal) VALUES
 ('Forte S.João', 'Póvoa de Varzim', 'Sérgio Magalhães', 1000.0),
-('Pacha', 'Ofir', 'José Vieira', 7500.0);
+('Via Rápida', 'Porto', 'Pedro Trindade', 2400.0),
+('Pacha', 'Ofir', 'José Vieira', 7500.0),
+('Pedra do Couto', 'Santo Tirso', 'Paulo Martins', 3000.0),
+('Gare', 'Porto', 'Len Faki', 500.0);
 
 INSERT INTO Membro (BI, idDiscoteca, nrMembro, tipo) VALUES 
+--Membros Forte S. João
 (14693657, 1, 1, 'VIP'),
 (14963658, 1, 2, 'VIP'),
 (14693659, 1, 3, 'VIP'),
@@ -44,11 +96,11 @@ INSERT INTO Membro (BI, idDiscoteca, nrMembro, tipo) VALUES
 (12994213, 1, 11,'VIP'),
 (19636493, 1, 12,'regular'),
 
+--Membros Via Rápida 
 (14693657, 2, 1, 'VIP'),
 (14963658, 2, 2, 'VIP'),
 (14693659, 2, 3, 'VIP'),
-
-(47542369, 2, 4, 'regular' ),
+(47542369, 2, 4, 'regular'),
 (12456978, 2, 5, 'VIP'),
 (29543593, 2, 6, 'VIP'),
 (44353213, 2, 7, 'regular'),
@@ -57,17 +109,116 @@ INSERT INTO Membro (BI, idDiscoteca, nrMembro, tipo) VALUES
 (57457623, 2, 10, 'regular'),
 (31526457, 2, 11, 'regular'),
 (34959324, 2, 12, 'regular'),
-(12547856, 2, 13, 'VIP');
+(12547856, 2, 13, 'VIP'),
+
+--Membros Pacha 
+(78485878, 3, 1, 'regular'),
+(12548532, 3, 2, 'VIP'),
+(14256989, 3, 3, 'VIP'),
+(12452899, 3, 4, 'regular'),
+(12545858, 3, 5, 'regular'),
+(12364689, 3, 6, 'VIP'),
+(56986698, 3, 7, 'VIP'),
+(12548785, 3, 8, 'VIP'),
+(25365489, 3, 9, 'regular'),
+(56369858, 3, 10, 'regular'),
+(12588999, 3, 11, 'VIP'),
+(52548898, 3, 12, 'regular'),
+(62569797, 3, 13, 'VIP'),
+(85848458, 3, 14, 'VIP'),
+(21245899, 3, 15, 'regular'),
+(12457889, 3, 16, 'regular'),
+
+--Membros Pedra do Couto
+(78485558, 4, 1, 'regular'),
+(12548578, 4, 2, 'regular'),
+(14256691, 4, 3, 'VIP'),
+(12452545, 4, 4, 'regular'),
+(12545845, 4, 5, 'regular'),
+(15422364, 4, 6, 'VIP'),
+(56984156, 4, 7, 'regular'),
+(15262548, 4, 8, 'VIP'),
+(45225365, 4, 9, 'regular'),
+(56385469, 4, 10, 'regular'),
+(12588956, 4, 11, 'regular'),
+(52456548, 4, 12, 'VIP'),
+(65622569, 4, 13, 'VIP'),
+(85845668, 4, 14, 'regular'),
+(21522245, 4, 15, 'regular'),
+(12457153, 4, 16, 'regular'),
+
+--Membros Gare
+(15377234, 5, 1,'regular'),
+(34587458, 5, 2,'VIP'),
+(15930134, 5, 3,'VIP'),
+(29543593, 5, 4, 'regular'),
+(44353213, 5, 5, 'regular'),
+(25425478, 5, 6, 'VIP'),
+(31231495, 5, 7, 'regular'),
+(57457623, 5, 8, 'regular'),
+(12548785, 5, 9, 'VIP'),
+(25365489, 5, 10, 'VIP'),
+(56369858, 5, 11, 'regular'),
+(15422364, 5, 12, 'VIP'),
+(56984156, 5, 13, 'regular'),
+(15262548, 5, 14, 'regular');
 
 INSERT INTO Reserva (dia, hora, nrGarrafas, nrSofas, BI) VALUES 
-('31-03-2020', '23:00', 5, 2, 14693657),
-('21-03-2020', '10:00', 5, 2, 14693659);
+--Reservas Membros Forte S. João
+('31-10-2021', '23:45', 5, 2, 14693657),
+('21-06-2021', '10:00', 5, 2, 14693659),
+('25-07-2021', '02:00', 1, 0, 14963658),
+('05-07-2021', '01:30', 2, 1, 14693659),
+('02-08-2021', '03:15', 1, 3, 24957641),
+('11-07-2021', '02:30', 3, 1, 15930134),
+('15-07-2021', '02:10', 9, 4, 12994213),
+
+--Reservas Membros Via Rápida 
+('20-08-2021', '01:00', 7, 3, 14693657),
+('14-08-2021', '00:40', 0, 0, 14963658),
+('02-09-2021', '01:30', 0, 1, 14693659),
+('09-06-2021', '03:15', 1, 2, 12456978),
+('18-07-2021', '02:30', 3, 4, 29543593),
+('15-10-2021', '04:20', 24, 5, 25425478),
+('24-09-2021', '02:00', 10, 2, 12547856),
+ 
+--Reservas Membros Pacha 
+('31-10-2021', '23:45', 10, 2, 12548532),
+('17-09-2021', '22:00', 2, 1, 14256989),
+('03-08-2021', '01:10', 3, 1, 12364689),
+('31-07-2021', '02:45', 10, 1, 56986698),
+('31-08-2021', '04:00', 12, 2, 12548785),
+('21-07-2021', '03:00', 13, 3, 12588999),
+('22-07-2021', '04:25', 17, 5, 62569797),
+('10-12-2021', '05:00', 11, 4, 85848458),
+
+--Reservas Membros Pedra do Couto
+('25-07-2021', '02:00', 16, 5, 14256691),
+('20-06-2021', '01:30', 12, 2, 15422364),
+('11-08-2021', '05:00', 10, 2, 15262548),
+('03-11-2021', '02:00', 5, 1, 52456548),
+('07-07-2021', '03:30', 10, 3, 65622569),
+
+--Reservas Membros Gare
+( '15-07-2021', '01:00', 1, 1, 34587458),
+( '25-08-2021', '02:45', 4, 1, 15930134),
+( '13-07-2021', '02:30', 5, 3, 25425478),
+( '25-09-2021', '23:00', 0, 2, 12548785),
+( '21-10-2021', '23:30', 20, 5, 25365489),
+( '24-06-2021', '03:00', 0, 1, 15422364);
 
 INSERT INTO Lounge (areaEspaco, idDiscoteca) VALUES 
-(400.0, 1);
+--Lounges Forte S. João
+(100.0, 1),
+(100.0, 1);
+--Lounges Via Rápida
+--Lounges Pacha
+--Lounges Pedra do Couto
+--Lounges Gare
 
 INSERT INTO ReservaLounge (idReserva, idLounge) VALUES
-(1, 1);
+(1, 1),
+(2, 1);
 
 INSERT INTO CaixasPagamento (areaEspaco, dinheiroCaixa, idDiscoteca) VALUES
 (30.0, 0.0, 1);
@@ -80,18 +231,127 @@ INSERT INTO Artista (nome, nrTelemovel, cache, tipo) VALUES
 ('Spice Girls', 917523345, 2500, 'convidado');
 
 INSERT INTO Pista (nome, areaEspaco, generoMusica, idResidente, idDiscoteca) VALUES
-('Old but Gold', 300.0, '90s', 1, 1);
+('Old but Gold', 300.0, '90s', 1, 1),
+('Gaiola', 400.0, 'funk', NULL, 1),
+('Blinded by the lights', 300.0, 'trance', NULL, 1);
+-- ('Old but Gold', 300.0, '90s', 1, 1),
+-- ('Old but Gold', 300.0, '90s', 1, 1),
+-- ('Old but Gold', 300.0, '90s', 1, 1),
+-- ('Boomusic', 300.0, '90s', 1, 1),
+-- ('Old but Gold', 300.0, '90s', 1, 1),
+-- ('Old but Gold', 300.0, '90s', 1, 1),
+-- ('Old but Gold', 300.0, '90s', 1, 1),
+-- ('Old but Gold', 300.0, '90s', 1, 1),
+-- ('Old but Gold', 300.0, '90s', 1, 1),
+-- ('Old but Gold', 300.0, '90s', 1, 1),
+-- ('Old but Gold', 300.0, '90s', 1, 1),
+-- ('Old but Gold', 300.0, '90s', 1, 1);
 
 INSERT INTO Atuacao (idArtista, idPista, horaComeco, horaFim, duracao) VALUES
 (2, 1, '01:00', '03:00', '02:00');
 
 INSERT INTO Bar (idPista) VALUES
 (1),
-(1);
+(1),
+(1),
+(2),
+(2),
+(3),
+(3);
+-- (4),
+-- (4),
+-- (5),
+-- (6),
+-- (6),
+-- (6),
+-- (7),
+-- (7),
+-- (7),
+-- (8);
+
+
 
 INSERT INTO Bebida (nome, marca, stock, preco, teorAlcoolico) VALUES
-('Rum', 'Bacardi', 500, 15.0, 37.5), -- confirmar valores
-('Rum', '151 Rum', 400, 20.0, 30); -- confirmar valores
+('Rum', 'Bacardi', 500, 5.0, 37.5),
+('Rum', 'Bacardi Lemon', 200, 7.0, 32.0),
+('Rum', '151 Rum', 300, 7.0, 30.0),
+('Rum', 'Cacique', 100, 7.0, 37.5),
+('Rum', 'Havana Club', 300, 5.0, 40.0),
+('Rum', 'Antília', 100, 5.0, 37.5),
+
+('Cachaça', '51 Cachaça', 600, 5.0,  40.0),
+('Cachaça', 'Velho Barreiro',  300, 5.0, 39.0),
+('Cachaça', 'Sagatiba Pura', 100, 7.0, 38.0),
+('Cachaça', 'Milbar', 100, 5.0, 38.0),
+
+('Tequila', 'Sierra Branca', 200, 5.0, 38.0),
+('Tequila', 'José Cuervo', 100, 5.0, 38.0),
+('Tequila', 'El Jimador', 60 , 8.0, 38.0),
+
+('Gin', 'Bombay', 400, 8.0, 40.0),
+('Gin', 'Bombay Saphire', 400, 8.0, 40.0),
+('Gin', 'Beefeater', 600, 6.0, 40.0),
+('Gin', 'Beefeater Pink', 600, 6.0, 40.0),
+('Gin', 'Gordons', 400, 5.0, 37.5),
+('Gin', 'Hendricks', 100, 12.0, 44),
+('Gin', 'Tanqueray', 100, 6.0, 38),
+
+('Vodka', 'Rodanov', 300, 9.0, 37.5),
+('Vodka', 'Miss', 300, 9.0, 37.5),
+('Vodka', 'Eristoff', 500, 9.0, 40.9),
+('Vodka', 'Grey Goose', 200, 9.0, 40.0),
+('Vodka', 'Absolut', 250, 9.0, 37.5),
+('Vodka', 'Smirnoff', 100, 9.0, 42.0),
+
+('Vodka Preta', 'Rodanov', 150, 9.0, 20.0),
+('Vodka Preta', 'Miss', 400, 9.0, 17.5),
+('Vodka Preta', 'Eristoff', 200, 9.0, 20.5),
+
+('Vodka Rosa', 'Absolut', 200, 9.0, 40.0),
+
+('Aguardente', 'Casa', 150, 9.0, 60.0),
+
+('Absinto', 'Kosten', 400, 9.0, 75.0),
+('Absinto', 'Rodniks', 400, 9.0, 75.0),
+
+('Conhaque', 'Dreher', 60 , 5.0, 38.0),
+
+('Bagaço', 'Lusíada', 1000, 4.0, 60.0),
+('Bagaço', 'Avô da Sara', 1000 , 5.0, 70.0),
+
+('Licor', 'Baileys', 55, 4.5, 15.7),
+('Licor', 'Beirão', 100, 5.0, 22.0),
+('Licor', 'Amendôa Amarga', 55, 5.0, 20.0),
+
+('Poncha', 'J.Faria', 200, 5.0, 25.0),
+
+('Whiskey', 'Jack Daniels', 200, 9.0, 40.0),
+('Whiskey', 'J&B', 200, 9.0, 40.0),
+('Whiskey', 'Jameson', 300, 8.0, 40.0),
+('Whiskey', 'Red Label', 150, 10.0, 40.0),
+('Whiskey', 'Cutty Sark', 150, 10.0, 40.0),
+('Whiskey', 'Bushmills', 60, 12.0, 40.0),
+
+('Caipirinha', 'Casa', 400, 5.0, 30.0),
+('Caipiblack', 'Casa', 200, 5.0, 15.0),
+('Caipirão', 'Casa', 100, 5.0, 30.0),
+('Caipiroska', 'Casa', 300, 5.0, 30.0),
+('Morangoska', 'Casa', 200, 6.0, 15.0),
+('Mojito', 'Casa', 400, 5.0, 30.0),
+
+('Martini Bianco', 'Martini', 300, 8.0, 15.0),
+('Martini Rosso', 'Martini', 300, 8.0, 15.0),
+
+('Cerveja', 'Estrella Galicia', 2000, 4.0, 7.5),
+('Água', 'Luso', 2000, 1.5, 0.0),
+('Cola', 'Coca-Cola', 1500, 2.0, 0.0),
+('Gasosa', 'Sprite', 1000, 2.0, 0.0),
+('Fanta de Laranja', 'Fanta', 1000, 2.0, 0.0),
+('Fanta de Uva', 'Fanta', 200, 2.0, 0.0),
+('Guaraná', 'Guaraná', 500, 2.0, 0.0),
+('Jói de Laranja', 'Jói', 1000, 2.0, 0.0),
+('Jói de Maracujá', 'Jói', 1000, 2.0, 0.0),
+('Jói de Limão', 'Jói', 750, 2.0, 0.0);
 
 INSERT INTO BarBebida (idBar, nome, marca) VALUES 
 (1, 'Rum', 'Bacardi'),
