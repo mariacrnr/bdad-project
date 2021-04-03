@@ -245,3 +245,4 @@ create table PistaSeguranca (
                                 ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (idSeguranca, idPista)
 );
+
