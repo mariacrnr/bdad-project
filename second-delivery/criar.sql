@@ -195,7 +195,7 @@ create table StaffGeral(
 create table Seguranca (
     id INTEGER NOT NULL REFERENCES Funcionario
                                     ON DELETE CASCADE ON UPDATE CASCADE,
-    licenca INT NOT NULL UNIQUE,
+    licenca INT NOT NULL UNIQUE CONSTRAINT LicencaForaLimite CHECK(licenca <= 999999),
     PRIMARY KEY (id)
 );
 

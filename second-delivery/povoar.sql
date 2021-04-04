@@ -1,10 +1,10 @@
 PRAGMA foreign_keys = ON;
 
 INSERT INTO Pessoa (BI, nome, idade, nrTelemovel) VALUES 
+
 (14693657, 'Edgar Torre', 18, 936355224),
 (14963658, 'André Santos', 19, 967742069),
 (14693659, 'Maria Carneiro', 19, 935475578),
-
 (25475859, 'João Andrade', 25, 967478784),
 (14967659, 'Sofia Germer', 24, 935447978),
 (24957641, 'Sérgio Estêvão', 22, 915447978),
@@ -25,7 +25,7 @@ INSERT INTO Pessoa (BI, nome, idade, nrTelemovel) VALUES
 (31526457, 'Concha Corte-Real', 23, 912546758),
 (34959324, 'José Carlos Faria', 38, 935321563),
 (12547856, 'Joana Reis', 35, 912345786),
-
+ 
 (12457484, 'Marta Ramos', 28, 914574581),
 (12457558, 'Rui Gomes', 27, 921457867),
 (32540547, 'Teresa Lima', 24, 965784875),
@@ -82,21 +82,75 @@ INSERT INTO Discoteca (nome, localizacao, proprietario, areaTotal) VALUES
 ('Gare', 'Porto', 'Len Faki', 500.0);
 
 INSERT INTO Membro (BI, idDiscoteca, nrMembro, tipo) VALUES 
---Membros Forte S. João
+
+-- Membros Forte S. João
 (14693657, 1, 1, 'VIP'),
 (14963658, 1, 2, 'VIP'),
 (14693659, 1, 3, 'VIP'),
-(25475859, 1, 4,'regular'),
-(14967659, 1, 5,'regular'),
-(24957641, 1, 6,'VIP'),
-(15377234, 1, 7,'regular'),
-(34587458, 1, 8,'regular'),
-(15930134, 1, 9,'VIP'),
-(18539412, 1, 10,'regular'),
-(12994213, 1, 11,'VIP'),
-(19636493, 1, 12,'regular'),
+(25475859, 1, 4, 'regular'),
+(14967659, 1, 5, 'regular'),
+(24957641, 1, 6, 'VIP'),
+(15377234, 1, 7, 'regular'),
+(34587458, 1, 8, 'regular'),
+(15930134, 1, 9, 'VIP'),
+(18539412, 1, 10, 'regular'),
+(12994213, 1, 11, 'VIP'),
+(19636493, 1, 12, 'regular'),
+(47542369, 1, 13, 'regular'),
+(12456978, 1, 14, 'regular'),
+(29543593, 1, 15, 'regular'),
+(44353213, 1, 16, 'regular'),
+(25425478, 1, 17, 'regular'),
+(31231495, 1, 18, 'regular'),
+(57457623, 1, 19, 'regular'),
+(31526457, 1, 20, 'regular'),
+(34959324, 1, 21, 'regular'),
+(12547856, 1, 22, 'regular'),
+(12457484, 1, 23, 'regular'),
+(12457558, 1, 24, 'regular'),
+(35478488, 1, 25, 'regular'),
+(45124587, 1, 26, 'regular'),
+(12423547, 1, 27, 'regular'),
+(36258747, 1, 28, 'regular'),
+(62548759, 1, 29, 'regular'),
+(51246597, 1, 30, 'regular'),
+(65475847, 1, 31, 'regular'),
+(12546989, 1, 32, 'regular'),
+(32545784, 1, 33, 'regular'),
+(85847857, 1, 34, 'regular'),
+(12548532, 1, 35, 'regular'),
+(14256989, 1, 36, 'regular'),
+(12452899, 1, 37, 'regular'),
+(12545858, 1, 38, 'regular'),
+(12364689, 1, 39, 'regular'),
+(56986698, 1, 40, 'regular'),
+(12548785, 1, 41, 'regular'),
+(25365489, 1, 42, 'regular'),
+(56369858, 1, 43, 'regular'),
+(12588999, 1, 44, 'regular'),
+(52548898, 1, 45, 'regular'),
+(62569797, 1, 46, 'regular'),
+(85848458, 1, 47, 'regular'),
+(21245899, 1, 48, 'regular'),
+(12457889, 1, 49, 'regular'),
+(78485558, 1, 50, 'regular'),
+(12548578, 1, 51, 'regular'),
+(14256691, 1, 52, 'regular'),
+(12452545, 1, 53, 'regular'),
+(12545845, 1, 54, 'regular'),
+(15422364, 1, 55, 'regular'),
+(56984156, 1, 56, 'regular'),
+(15262548, 1, 57, 'regular'),
+(45225365, 1, 58, 'regular'),
+(56385469, 1, 59, 'regular'),
+(12588956, 1, 60, 'regular'),
+(52456548, 1, 61, 'regular'),
+(65622569, 1, 62, 'regular'),
+(85845668, 1, 63, 'regular'),
+(21522245, 1, 64, 'regular'),
+(12457153, 1, 65, 'regular'),
 
---Membros Via Rápida 
+-- Membros Via Rápida 
 (14693657, 2, 1, 'VIP'),
 (14963658, 2, 2, 'VIP'),
 (14693659, 2, 3, 'VIP'),
@@ -110,8 +164,51 @@ INSERT INTO Membro (BI, idDiscoteca, nrMembro, tipo) VALUES
 (31526457, 2, 11, 'regular'),
 (34959324, 2, 12, 'regular'),
 (12547856, 2, 13, 'VIP'),
+(12457484, 2, 14, 'regular'),
+(12457558, 2, 15, 'regular'),
+(35478488, 2, 16, 'regular'),
+(45124587, 2, 17, 'regular'),
+(12423547, 2, 18, 'regular'),
+(36258747, 2, 19, 'regular'),
+(62548759, 2, 20, 'regular'),
+(51246597, 2, 21, 'regular'),
+(65475847, 2, 22, 'regular'),
+(12546989, 2, 23, 'regular'),
+(32545784, 2, 24, 'regular'),
+(85847857, 2, 25, 'regular'),
+(12548532, 2, 26, 'regular'),
+(14256989, 2, 27, 'regular'),
+(12452899, 2, 28, 'regular'),
+(12545858, 2, 29, 'regular'),
+(12364689, 2, 30, 'regular'),
+(56986698, 2, 31, 'regular'),
+(12548785, 2, 32, 'regular'),
+(25365489, 2, 33, 'regular'),
+(56369858, 2, 34, 'regular'),
+(12588999, 2, 35, 'regular'),
+(52548898, 2, 36, 'regular'),
+(62569797, 2, 37, 'regular'),
+(85848458, 2, 38, 'regular'),
+(21245899, 2, 39, 'regular'),
+(12457889, 2, 40, 'regular'),
+(78485558, 2, 41, 'regular'),
+(12548578, 2, 42, 'regular'),
+(14256691, 2, 43, 'regular'),
+(12452545, 2, 44, 'regular'),
+(12545845, 2, 45, 'regular'),
+(15422364, 2, 46, 'regular'),
+(56984156, 2, 47, 'regular'),
+(15262548, 2, 48, 'regular'),
+(45225365, 2, 49, 'regular'),
+(56385469, 2, 50, 'regular'),
+(12588956, 2, 51, 'regular'),
+(52456548, 2, 52, 'regular'),
+(65622569, 2, 53, 'regular'),
+(85845668, 2, 54, 'regular'),
+(21522245, 2, 55, 'regular'),
+(12457153, 2, 56, 'regular'),
 
---Membros Pacha 
+-- Membros Pacha 
 (78485878, 3, 1, 'regular'),
 (12548532, 3, 2, 'VIP'),
 (14256989, 3, 3, 'VIP'),
@@ -128,8 +225,59 @@ INSERT INTO Membro (BI, idDiscoteca, nrMembro, tipo) VALUES
 (85848458, 3, 14, 'VIP'),
 (21245899, 3, 15, 'regular'),
 (12457889, 3, 16, 'regular'),
+(14693657, 3, 17, 'regular'),
+(14963658, 3, 18, 'regular'),
+(14693659, 3, 19, 'regular'),
+(25475859, 3, 20, 'regular'),
+(14967659, 3, 21, 'regular'),
+(24957641, 3, 22, 'regular'),
+(15377234, 3, 23, 'regular'),
+(34587458, 3, 24, 'regular'),
+(15930134, 3, 25, 'regular'),
+(18539412, 3, 26, 'regular'),
+(12994213, 3, 27, 'regular'),
+(19636493, 3, 28, 'regular'),
+(47542369, 3, 29, 'regular'),
+(12456978, 3, 30, 'regular'),
+(29543593, 3, 31, 'regular'),
+(44353213, 3, 32, 'regular'),
+(25425478, 3, 33, 'regular'),
+(31231495, 3, 34, 'regular'),
+(57457623, 3, 35, 'regular'),
+(31526457, 3, 36, 'regular'),
+(34959324, 3, 37, 'regular'),
+(12547856, 3, 38, 'regular'),
+(12457484, 3, 39, 'regular'),
+(12457558, 3, 40, 'regular'),
+(32540547, 3, 41, 'regular'),
+(35478488, 3, 42, 'regular'),
+(45124587, 3, 43, 'regular'),
+(12423547, 3, 44, 'regular'),
+(36258747, 3, 45, 'regular'),
+(62548759, 3, 46, 'regular'),
+(51246597, 3, 47, 'regular'),
+(65475847, 3, 48, 'regular'),
+(12546989, 3, 49, 'regular'),
+(32545784, 3, 50, 'regular'),
+(85847857, 3, 51, 'regular'),
+(78485558, 3, 52, 'regular'),
+(12548578, 3, 53, 'regular'),
+(14256691, 3, 54, 'regular'),
+(12452545, 3, 55, 'regular'),
+(12545845, 3, 56, 'regular'),
+(15422364, 3, 57, 'regular'),
+(56984156, 3, 58, 'regular'),
+(15262548, 3, 59, 'regular'),
+(45225365, 3, 60, 'regular'),
+(56385469, 3, 61, 'regular'),
+(12588956, 3, 62, 'regular'),
+(52456548, 3, 63, 'regular'),
+(65622569, 3, 64, 'regular'),
+(85845668, 3, 65, 'regular'),
+(21522245, 3, 66, 'regular'),
+(12457153, 3, 67, 'regular'),
 
---Membros Pedra do Couto
+-- Membros Pedra do Couto
 (78485558, 4, 1, 'regular'),
 (12548578, 4, 2, 'regular'),
 (14256691, 4, 3, 'VIP'),
@@ -146,8 +294,59 @@ INSERT INTO Membro (BI, idDiscoteca, nrMembro, tipo) VALUES
 (85845668, 4, 14, 'regular'),
 (21522245, 4, 15, 'regular'),
 (12457153, 4, 16, 'regular'),
+(14693657, 4, 17, 'regular'),
+(14963658, 4, 18, 'regular'),
+(14693659, 4, 19, 'regular'),
+(25475859, 4, 20, 'regular'),
+(14967659, 4, 21, 'regular'),
+(24957641, 4, 22, 'regular'),
+(15377234, 4, 23, 'regular'),
+(34587458, 4, 24, 'regular'),
+(15930134, 4, 25, 'regular'),
+(18539412, 4, 26, 'regular'),
+(12994213, 4, 27, 'regular'),
+(19636493, 4, 28, 'regular'),
+(47542369, 4, 29, 'regular'),
+(12456978, 4, 30, 'regular'),
+(29543593, 4, 31, 'regular'),
+(44353213, 4, 32, 'regular'),
+(25425478, 4, 33, 'regular'),
+(31231495, 4, 34, 'regular'),
+(57457623, 4, 35, 'regular'),
+(31526457, 4, 36, 'regular'),
+(34959324, 4, 37, 'regular'),
+(12547856, 4, 38, 'regular'),
+(12457484, 4, 39, 'regular'),
+(12457558, 4, 40, 'regular'),
+(32540547, 4, 41, 'regular'),
+(35478488, 4, 42, 'regular'),
+(45124587, 4, 43, 'regular'),
+(12423547, 4, 44, 'regular'),
+(36258747, 4, 45, 'regular'),
+(62548759, 4, 46, 'regular'),
+(51246597, 4, 47, 'regular'),
+(65475847, 4, 48, 'regular'),
+(12546989, 4, 49, 'regular'),
+(32545784, 4, 50, 'regular'),
+(85847857, 4, 51, 'regular'),
+(78485878, 4, 52, 'regular'),
+(12548532, 4, 53, 'regular'),
+(14256989, 4, 54, 'regular'),
+(12452899, 4, 55, 'regular'),
+(12545858, 4, 56, 'regular'),
+(12364689, 4, 57, 'regular'),
+(56986698, 4, 58, 'regular'),
+(12548785, 4, 59, 'regular'),
+(25365489, 4, 60, 'regular'),
+(56369858, 4, 61, 'regular'),
+(12588999, 4, 62, 'regular'),
+(52548898, 4, 63, 'regular'),
+(62569797, 4, 64, 'regular'),
+(85848458, 4, 65, 'regular'),
+(21245899, 4, 66, 'regular'),
+(12457889, 4, 67, 'regular'),
 
---Membros Gare
+-- Membros Gare
 (15377234, 5, 1,'regular'),
 (34587458, 5, 2,'VIP'),
 (15930134, 5, 3,'VIP'),
@@ -161,12 +360,65 @@ INSERT INTO Membro (BI, idDiscoteca, nrMembro, tipo) VALUES
 (56369858, 5, 11, 'regular'),
 (15422364, 5, 12, 'VIP'),
 (56984156, 5, 13, 'regular'),
-(15262548, 5, 14, 'regular');
+(15262548, 5, 14, 'regular'),
+(14693657, 5, 15, 'regular'),
+(14963658, 5, 16, 'regular'),
+(14693659, 5, 17, 'regular'),
+(25475859, 5, 18, 'regular'),
+(14967659, 5, 19, 'regular'),
+(24957641, 5, 20, 'regular'),
+(18539412, 5, 21, 'regular'),
+(12994213, 5, 22, 'regular'),
+(19636493, 5, 23, 'regular'),
+(47542369, 5, 24, 'regular'),
+(12456978, 5, 25, 'regular'),
+(31526457, 5, 26, 'regular'),
+(34959324, 5, 27, 'regular'),
+(12547856, 5, 28, 'regular'),
+(12457484, 5, 29, 'regular'),
+(12457558, 5, 30, 'regular'),
+(32540547, 5, 31, 'regular'),
+(35478488, 5, 32, 'regular'),
+(45124587, 5, 33, 'regular'),
+(12423547, 5, 34, 'regular'),
+(36258747, 5, 35, 'regular'),
+(62548759, 5, 36, 'regular'),
+(51246597, 5, 37, 'regular'),
+(65475847, 5, 38, 'regular'),
+(12546989, 5, 39, 'regular'),
+(32545784, 5, 40, 'regular'),
+(85847857, 5, 41, 'regular'),
+(78485878, 5, 42, 'regular'),
+(12548532, 5, 43, 'regular'),
+(14256989, 5, 44, 'regular'),
+(12452899, 5, 45, 'regular'),
+(12545858, 5, 46, 'regular'),
+(12364689, 5, 47, 'regular'),
+(56986698, 5, 48, 'regular'),
+(12588999, 5, 49, 'regular'),
+(52548898, 5, 50, 'regular'),
+(62569797, 5, 51, 'regular'),
+(85848458, 5, 52, 'regular'),
+(21245899, 5, 53, 'regular'),
+(12457889, 5, 54, 'regular'),
+(78485558, 5, 55, 'regular'),
+(12548578, 5, 56, 'regular'),
+(14256691, 5, 57, 'regular'),
+(12452545, 5, 58, 'regular'),
+(12545845, 5, 59, 'regular'),
+(45225365, 5, 60, 'regular'),
+(56385469, 5, 61, 'regular'),
+(12588956, 5, 62, 'regular'),
+(52456548, 5, 63, 'regular'),
+(65622569, 5, 64, 'regular'),
+(85845668, 5, 65, 'regular'),
+(21522245, 5, 66, 'regular'),
+(12457153, 5, 67, 'regular');
 
 INSERT INTO Reserva (dia, hora, nrGarrafas, nrSofas, BI) VALUES 
---Reservas Membros VIP Forte S. João
+-- Reservas Membros VIP Forte S. João
 ('31-10-2021', '23:45', 5, 2, 14693657),
-('31-10-2021', '23:45', 3, 1, 14693657), --Reserva na mesma discoteca lounges diferentes com diferente quantidade de garrafas e sofas 
+('31-10-2021', '23:45', 3, 1, 14693657), -- Reserva na mesma discoteca lounges diferentes com diferente quantidade de garrafas e sofas 
 ('21-06-2021', '10:00', 5, 2, 14693659),
 ('25-07-2021', '02:00', 1, 0, 14963658),
 ('05-07-2021', '01:30', 2, 1, 14693659),
@@ -174,7 +426,7 @@ INSERT INTO Reserva (dia, hora, nrGarrafas, nrSofas, BI) VALUES
 ('11-07-2021', '02:30', 3, 1, 15930134),
 ('15-07-2021', '02:10', 9, 4, 12994213),
 
---Reservas Membros VIP Via Rápida 
+-- Reservas Membros VIP Via Rápida 
 ('20-08-2021', '01:00', 7, 3, 14693657),
 ('14-08-2021', '00:40', 0, 0, 14963658),
 ('02-09-2021', '01:30', 0, 1, 14693659),
@@ -183,7 +435,7 @@ INSERT INTO Reserva (dia, hora, nrGarrafas, nrSofas, BI) VALUES
 ('15-10-2021', '04:20', 24, 5, 25425478),
 ('24-09-2021', '02:00', 10, 2, 12547856),
  
---Reservas Membros VIP Pacha 
+-- Reservas Membros VIP Pacha 
 ('31-10-2021', '23:45', 10, 2, 12548532),
 ('17-09-2021', '22:00', 2, 1, 14256989),
 ('03-08-2021', '01:10', 3, 1, 12364689),
@@ -193,14 +445,14 @@ INSERT INTO Reserva (dia, hora, nrGarrafas, nrSofas, BI) VALUES
 ('22-07-2021', '04:25', 17, 5, 62569797),
 ('10-12-2021', '05:00', 11, 4, 85848458),
 
---Reservas Membros VIP Pedra do Couto
+-- Reservas Membros VIP Pedra do Couto
 ('25-07-2021', '02:00', 16, 5, 14256691),
 ('20-06-2021', '01:30', 12, 2, 15422364),
 ('11-08-2021', '05:00', 10, 2, 15262548),
 ('03-11-2021', '02:00', 5, 1, 52456548),
 ('07-07-2021', '03:30', 10, 3, 65622569),
 
---Reservas Membros VIP Gare
+-- Reservas Membros VIP Gare
 ('15-07-2021', '01:00', 1, 1, 34587458),
 ('25-08-2021', '02:45', 4, 1, 15930134),
 ('13-07-2021', '02:30', 5, 3, 25425478),
@@ -209,35 +461,35 @@ INSERT INTO Reserva (dia, hora, nrGarrafas, nrSofas, BI) VALUES
 ('24-06-2021', '03:00', 0, 1, 15422364);
 
 INSERT INTO Lounge (areaEspaco, idDiscoteca) VALUES 
---Lounges Forte S. João
-(100.0, 1),
-(100.0, 1),
+-- Lounges Forte S. João
+(100.0, 1), 
+(100.0, 1), 
 
---Lounges Via Rápida
-(150.0, 2),
-(150.0, 2),
-(150.0, 2),
+-- Lounges Via Rápida
+(150.0, 2), 
+(150.0, 2), 
+(150.0, 2), 
 
---Lounges Pacha
-(200.0, 3),
+-- Lounges Pacha
+(200.0, 3), 
 (200.0, 3),
 (300.0, 3),
 (100.0, 3),
 (100.0, 3),
 (100.0, 3),
 
---Lounges Pedra do Couto
+-- Lounges Pedra do Couto
 (200.0, 4),
 (200.0, 4),
 (100.0, 4),
 (100.0, 4),
 
---Lounges Gare
+-- Lounges Gare
 (50.0, 5),
 (25.0, 5);
 
 INSERT INTO ReservaLounge (idReserva, idLounge) VALUES
---Reservas Lounges Forte S. João
+-- Reservas Lounges Forte S. João
 (1, 1),
 (1, 2),
 (2, 2),
@@ -249,7 +501,7 @@ INSERT INTO ReservaLounge (idReserva, idLounge) VALUES
 (7, 2),
 (8, 2),
 
---Reservas Lounges Via Rápida
+-- Reservas Lounges Via Rápida
 (9, 3),
 (9, 4),
 (10, 3),
@@ -261,7 +513,7 @@ INSERT INTO ReservaLounge (idReserva, idLounge) VALUES
 (14, 5),
 (15, 5),
 
---Reservas Lounges Pacha
+-- Reservas Lounges Pacha
 (16, 6),
 (16, 10),
 (17, 7),
@@ -278,7 +530,7 @@ INSERT INTO ReservaLounge (idReserva, idLounge) VALUES
 (23, 10),
 (23, 6),
 
---Reservas Lounges Pedra do Couto
+-- Reservas Lounges Pedra do Couto
 (24,12),
 (25,13),
 (25,15),
@@ -288,7 +540,7 @@ INSERT INTO ReservaLounge (idReserva, idLounge) VALUES
 (28,12),
 (28,14),
 
---Reservas Lounges Gare
+-- Reservas Lounges Gare
 (29,16),
 (30,16),
 (31,16),
@@ -298,51 +550,51 @@ INSERT INTO ReservaLounge (idReserva, idLounge) VALUES
 (34,17);
 
 INSERT INTO CaixasPagamento (areaEspaco, dinheiroCaixa, idDiscoteca) VALUES
---Caixas Forte S. João
+-- Caixas Forte S. João
 (50.0, 200.0, 1),
 
---Caixas Via Rápida
+-- Caixas Via Rápida
 (70.0, 300.0, 2),
 (30.0, 150.0, 2),
 
---Caixas Pacha
+-- Caixas Pacha
 (50.0, 150.0, 3),
 (80.0, 300.0, 3),
 (50.0, 300.0, 3),
 (50.0, 200.0, 3),
 (70.0, 500.0, 3),
 
---Caixas Pedra do Couto
+-- Caixas Pedra do Couto
 (50.0, 200.0, 4),
 (80.0, 150.0, 4),
 (70.0, 100.0, 4),
 
---Caixas Gare
+-- Caixas Gare
 (45.0, 100.0, 5);
 
 INSERT INTO Bengaleiro (areaEspaco, nrMaxCasacos, precoCasaco, idDiscoteca) VALUES
---Bengaleiros Forte S. João
+-- Bengaleiros Forte S. João
 (30.0, 300, 1.5, 1),
 
---Bengaleiros Via Rápida
+-- Bengaleiros Via Rápida
 (50.0, 500, 2.0, 2),
 
---Bengaleiros Pacha
+-- Bengaleiros Pacha
 (50.0, 600, 3.0, 3),
 (100.0, 800, 3.0, 3),
 (50.0, 600, 3.0, 3),
 
---Bengaleiros Pedra do Couto
+-- Bengaleiros Pedra do Couto
 (50.0, 600, 2.0, 4),
 (50.0, 600, 2.0, 4),
 
---Bengaleiros Gare
+-- Bengaleiros Gare
 (20.0, 400, 1.5, 5);
 
---Areas Livres para gastar nos outros espaços: Forte: 720 , VR: 1800, Pacha: 6150, Pedra: 2100, Gare: 360
+-- Areas Livres para gastar nos outros espaços: Forte: 720 , VR: 1800, Pacha: 6150, Pedra: 2100, Gare: 360
 INSERT INTO Artista (nome, nrTelemovel, cache, tipo) VALUES
 
---Funk
+-- Funk
 ('MC Teteu', 963434888, 1000, 'residente'),  -- 1
 ('PK', 939912880, 1000, 'convidado'), -- 2
 ('MC Kevinho', 929888232, 1000, 'convidado'), -- 3
@@ -350,8 +602,8 @@ INSERT INTO Artista (nome, nrTelemovel, cache, tipo) VALUES
 ('Dj Guuga', 910444440, 1000, 'convidado'), -- 5
 ('MC Don Juan', 933734111, 1000, 'convidado'), -- 6
 ('MC Kevin o Chris', 931849253, 1000, 'convidado'), -- 7
- -- 
---Trance -- 
+
+-- Trance
 ('Vini Vici', 918998944, 1000, 'residente'), -- 8
 ('Timmy Trumpet', 939758213, 1000, 'convidado'), -- 9
 ('Mandragora', 911123423, 1000, 'convidado'), -- 10
@@ -360,8 +612,8 @@ INSERT INTO Artista (nome, nrTelemovel, cache, tipo) VALUES
 ('Babalos', 910420696, 1000, 'residente'), -- 13
 ('Menumas', 918432187, 1000, 'convidado'), -- 14
 ('Hilight Tribe', 911550430, 1000, 'convidado'), -- 15 
- -- 
---House -- 
+
+-- House
 ('Swedish House Mafia', 910858585, 1000, 'residente'), -- 16 
 ('Tiësto', 930505000, 1000, 'convidado'), -- 17
 ('Calvin Harris', 912505505, 1000, 'convidado'), -- 18
@@ -370,7 +622,7 @@ INSERT INTO Artista (nome, nrTelemovel, cache, tipo) VALUES
 ('Dmitri Vegas & Like Mike', 939539522, 1000, 'convidado'), -- 21
 ('David Guetta', 937770099, 1000, 'convidado'), --22
 
---90s
+-- 90s
 ('Gala', 934564568, 3000, 'convidado'), -- 23
 ('Spice Girls', 917523345, 2500, 'convidado'), -- 24
 ('Nightcrawlers', 932832382, 1000, 'convidado'), -- 25
@@ -379,7 +631,7 @@ INSERT INTO Artista (nome, nrTelemovel, cache, tipo) VALUES
 ('Kris Kross', 911450450, 1000, 'convidado'), -- 28
 ('The Prodigy', 930055660, 1000, 'convidado'), -- 29
 
---Kizomba
+-- Kizomba
 ('C4 Pedro', 936234234, 1000, 'residente'), -- 30
 ('Nelson Freitas', 916610486, 1000, 'convidado'), -- 31
 ('Master Jake', 939980486, 1000, 'convidado'), -- 32
@@ -388,7 +640,7 @@ INSERT INTO Artista (nome, nrTelemovel, cache, tipo) VALUES
 ('Zona 5', 913319319, 1000, 'convidado'), -- 35
 ('G-Amado', 936355224, 1000, 'convidado'), -- 36
 
---Reggaetton
+-- Reggaetton
 ('Nio Garcia', 919133215, 1000, 'convidado'), -- 37
 ('Nicky Jam', 936677576, 1000, 'residente'), -- 38
 ('Ozuna', 918432924, 1000, 'convidado'), -- 39
@@ -398,17 +650,17 @@ INSERT INTO Artista (nome, nrTelemovel, cache, tipo) VALUES
 ('J Balvin', 932547666, 1000, 'convidado'); -- 44
 
 
---Areas Livres para gastar nos outros espaços: Forte: 720 , VR: 1800, Pacha: 6150, Pedra: 2100, Gare: 360
---'funk', 'trance', 'house','90s', 'kizomba', 'reggaeton'
+-- Areas Livres para gastar nos outros espaços: Forte: 720 , VR: 1800, Pacha: 6150, Pedra: 2100, Gare: 360
+-- 'funk', 'trance', 'house','90s', 'kizomba', 'reggaeton'
 INSERT INTO Pista (nome, areaEspaco, generoMusica, idResidente, idDiscoteca) VALUES
---Pistas Forte
+-- Pistas Forte
 ('Old but Gold', 200.0, '90s', 26, 1), -- 1
 ('Gaiola', 400.0, 'funk', 1, 1), -- 2
 
---Pistas Via Rápida
+-- Pistas Via Rápida
 ('In our hearts', 1000.0, 'trance', 11, 2), -- 3
 
---Pistas Pacha
+-- Pistas Pacha
 ('Boomusic', 400.0, '90s', NULL, 3), -- 4
 ('Cristalina', 1000.0, 'trance', 8, 3), -- 5
 ('Ofir de Janeiro', 1000.0, 'funk', NULL, 3), -- 6 
@@ -416,30 +668,27 @@ INSERT INTO Pista (nome, areaEspaco, generoMusica, idResidente, idDiscoteca) VAL
 ('Rosso', 800.0, 'kizomba', 30, 3), -- 8
 ('Jamal', 600.0, 'reggaeton', 38, 3), -- 9
 
-
---Pistas Pedra do Couto
-
+-- Pistas Pedra do Couto
 ('Casa de papel', 800.0, 'house', 20, 4),
 ('Ajuntamentos', 600.0, 'kizomba', NULL, 4),
 
---Pistas Gare
-
+-- Pistas Gare
 ('Venda nova', 300.0, 'trance', 13, 5);
 
 INSERT INTO Atuacao (idArtista, idPista, horaComeco, horaFim, duracao) VALUES
 (2, 1, '01:00', '03:00', '02:00');
 
 INSERT INTO Bar (idPista) VALUES
---Bares Forte S João
+-- Bares Forte S João
 (1),
 (1),
 (2),
 
---Bares Via Rápida
+-- Bares Via Rápida
 (3),
 (3),
 
---Bares Pacha
+-- Bares Pacha
 (4),
 (5),
 (5),
@@ -449,12 +698,12 @@ INSERT INTO Bar (idPista) VALUES
 (8),
 (9),
 
---Bares Pedra do Couto
+-- Bares Pedra do Couto
 (10),
 (10),
 (11),
 
---Bares Gare
+-- Bares Gare
 (12);
 
 INSERT INTO Bebida (nome, marca, stock, preco, teorAlcoolico) VALUES
@@ -542,8 +791,8 @@ INSERT INTO Bebida (nome, marca, stock, preco, teorAlcoolico) VALUES
 
 INSERT INTO BarBebida (idBar, nome, marca) VALUES
 
---Lista Bebidas Forte S João
---Bar 1
+-- Lista Bebidas Forte S João
+-- Bar 1
 (1, 'Rum', 'Bacardi'),
 (1, 'Rum', '151 Rum'),
 (1, 'Rum', 'Antília'),
@@ -583,7 +832,7 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (1, 'Jói de Maracujá', 'Jói'),
 (1, 'Jói de Limão', 'Jói'),
 
---Bar 2
+-- Bar 2
 (2, 'Rum', 'Bacardi'),
 (2, 'Rum', 'Bacardi Lemon'),
 (2, 'Rum', 'Antília'),
@@ -627,7 +876,7 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (2, 'Jói de Maracujá', 'Jói'),
 (2, 'Jói de Limão', 'Jói'),
 
---Bar 3
+-- Bar 3
 (3, 'Rum', 'Bacardi'),
 (3, 'Rum', 'Bacardi Lemon'),
 (3, 'Rum', 'Havana Club'),
@@ -670,8 +919,8 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (3, 'Jói de Maracujá', 'Jói'),
 (3, 'Jói de Limão', 'Jói'),
 
---Lista Bebidas Via Rápida 
---Bar 1
+-- Lista Bebidas Via Rápida 
+-- Bar 1
 (4, 'Rum', 'Bacardi'),
 (4, 'Rum', '151 Rum'),
 (4, 'Rum', 'Havana Club'),
@@ -719,7 +968,7 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (4, 'Jói de Maracujá', 'Jói'),
 (4, 'Jói de Limão', 'Jói'),
 
---Bar 2
+-- Bar 2
 (5, 'Rum', 'Bacardi'),
 (5, 'Rum', '151 Rum'),
 (5, 'Rum', 'Havana Club'),
@@ -757,8 +1006,8 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (5, 'Jói de Maracujá', 'Jói'),
 (5, 'Jói de Limão', 'Jói'),
 
---Lista  Bebidas Pacha
---Bar 1
+-- Lista  Bebidas Pacha
+-- Bar 1
 (6, 'Rum', '151 Rum'),
 (6, 'Rum', 'Bacardi Lemon'),
 (6, 'Rum', 'Antília'),
@@ -806,7 +1055,7 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (6, 'Jói de Maracujá', 'Jói'),
 (6, 'Jói de Limão', 'Jói'),
 
---Bar 2
+-- Bar 2
 (7, 'Cachaça', '51 Cachaça'),
 (7, 'Tequila', 'Sierra Branca'),
 (7, 'Gin', 'Bombay'),
@@ -837,7 +1086,7 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (7, 'Jói de Maracujá', 'Jói'),
 (7, 'Jói de Limão', 'Jói'),
 
---Bar 3
+-- Bar 3
 (8, 'Rum', 'Bacardi'),
 (8, 'Rum', '151 Rum'),
 (8, 'Rum', 'Antília'),
@@ -874,7 +1123,7 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (8, 'Jói de Maracujá', 'Jói'),
 (8, 'Jói de Limão', 'Jói'),
 
---Bar 4
+-- Bar 4
 (9, 'Tequila', 'Sierra Branca'),
 (9, 'Gin', 'Beefeater Pink'),
 (9, 'Gin', 'Gordons'), 
@@ -897,7 +1146,7 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (9, 'Jói de Maracujá', 'Jói'),
 (9, 'Jói de Limão', 'Jói'),
 
---Bar 5
+-- Bar 5
 (10, 'Rum', 'Bacardi'),
 (10, 'Rum', '151 Rum'),
 (10, 'Rum', 'Havana Club'),
@@ -935,7 +1184,7 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (10, 'Jói de Maracujá', 'Jói'),
 (10, 'Jói de Limão', 'Jói'),
 
---Bar 6
+-- Bar 6
 (11, 'Rum', '151 Rum'),
 (11, 'Rum', 'Cacique'),
 (11, 'Cachaça', 'Sagatiba Pura'),
@@ -971,7 +1220,7 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (11, 'Jói de Maracujá', 'Jói'),
 (11, 'Jói de Limão', 'Jói'),
 
---Bar 7
+-- Bar 7
 (12, 'Rum', '151 Rum'),
 (12, 'Rum', 'Bacardi Lemon'),
 (12, 'Rum', 'Havana Club'),
@@ -1009,7 +1258,7 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (12, 'Jói de Maracujá', 'Jói'),
 (12, 'Jói de Limão', 'Jói'),
 
---Bar 8
+-- Bar 8
 (13, 'Rum', 'Bacardi Lemon'),
 (13, 'Rum', 'Cacique'),
 (13, 'Rum', 'Antília'),
@@ -1048,8 +1297,8 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (13, 'Jói de Limão', 'Jói'),
 
 
---Lista Bebidas Pedra do Couto
---Bar 1
+-- Lista Bebidas Pedra do Couto
+-- Bar 1
 (14, 'Rum', '151 Rum'),
 (14, 'Rum', 'Antília'),
 (14, 'Cachaça', '51 Cachaça'),
@@ -1093,7 +1342,7 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (14, 'Jói de Maracujá', 'Jói'),
 (14, 'Jói de Limão', 'Jói'),
 
---Bar 2
+-- Bar 2
 (15, 'Rum', 'Bacardi'),
 (15, 'Rum', 'Cacique'),
 (15, 'Cachaça', '51 Cachaça'),
@@ -1135,7 +1384,7 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (15, 'Jói de Maracujá', 'Jói'),
 (15, 'Jói de Limão', 'Jói'),
 
---Bar 3
+-- Bar 3
 (16, 'Rum', '151 Rum'),
 (16, 'Rum', 'Antília'),
 (16, 'Cachaça', '51 Cachaça'),
@@ -1173,8 +1422,8 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (16, 'Jói de Maracujá', 'Jói'),
 (16, 'Jói de Limão', 'Jói'),
 
---Lista Bebidas Gare
---Bar 1
+-- Lista Bebidas Gare
+-- Bar 1
 (17, 'Rum', 'Havana Club'),
 (17, 'Rum', 'Antília'),
 (17, 'Cachaça', 'Sagatiba Pura'),
@@ -1216,169 +1465,499 @@ INSERT INTO BarBebida (idBar, nome, marca) VALUES
 (17, 'Jói de Limão', 'Jói');
 
 INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VALUES
---Funcionários Forte S. João
---Seguranças (2)
-('Rafael Ribeiro', 933384731, 18354932, 'Avenida da Boavista, Porto', 900, 1),
-('João Silva', 965874785, 14254158, 'Rua das Flores, Penafiel', 800, 1),
-('Marta Aguiar', 916857584, 12548579, 'Rua Primeiro de Maio, Póvoa de Varzim', 900, 1),
-('Francisco Tojeiro', 932456871, 12546987, 'Praça do 25 de Abril, Matosinhos', 900, 1),
-('Luísa Rentes', 921458759, 14256874, 'Avenida do Ramalhete, Aveiro', 800, 1),
-('Márcio Ferreira', 935869478, 12365895, 'Rua dos Tormentos, Gondomar', 900, 1),
---Bartender (3)
-('Marlene Ramada', 917737123, 12233745, 'Avenida dos Banhos, Viana do Castelo', 1300, 1),
-('Leonor Lopes', 918734561, 14562943, 'Travessa dos Santos, Guimarães', 1000, 1),
-('Manuela Quinaz', 912365987, 25469874, 'Rua Dr Mário Soares, Porto', 900, 1),
-('Joana Alves', 963254787, 12541578, 'Rua Dr Mário Soares, Porto', 900, 1),
-('Filipa Travanca', 925468747, 14575968, 'Avenida do Pombal, Felgueiras', 1100, 1),
-('Marta Andrade', 963258748, 85746958, 'Praça dos Mártires, Braga', 1000, 1),
---Staff (4)
-('Gonçalo Antunes', 961234325, 19327358, 'Rua dos Clérigos, Póvoa de Varzim', 800, 1),
-('Rita Jaime', 921478781, 14745587, 'Rua da Costa Nova, Viana do Castelo', 700, 1),
-('Olga Tavares', 912457879, 12548745, 'Estrada da Bota, Lousada', 700, 1),
-('Rui Elvas', 912457569, 58545875, 'Rua de Guimarães, Felgueiras', 1500, 1),
-('André Gonçalves', 965823145, 14785964, 'Rua da Felicidade, Lamego', 700, 1),
+-- Funcionários Forte S. João
+-- Seguranças
+('Rafael Ribeiro', 933384731, 18354932, 'Avenida da Boavista, Porto', 900, 1), -- 1
+('João Silva', 965874785, 14254158, 'Rua das Flores, Penafiel', 800, 1), --2
+('Marta Aguiar', 916857584, 12548579, 'Rua Primeiro de Maio, Póvoa de Varzim', 900, 1), -- 3
+('Francisco Tojeiro', 932456871, 12546987, 'Praça do 25 de Abril, Matosinhos', 900, 1), -- 4
+('Luísa Rentes', 921458759, 14256874, 'Avenida do Ramalhete, Aveiro', 800, 1), -- 5
+('Márcio Ferreira', 935869478, 12365895, 'Rua dos Tormentos, Gondomar', 900, 1), -- 6
+-- Bartender
+('Marlene Ramada', 917737123, 12233745, 'Avenida dos Banhos, Viana do Castelo', 1300, 1), -- 7
+('Leonor Lopes', 918734561, 14562943, 'Travessa dos Santos, Guimarães', 1000, 1), -- 8
+('Manuela Quinaz', 912365987, 25469874, 'Rua Dr Mário Soares, Porto', 900, 1), -- 9
+('Joana Alves', 963254787, 12541578, 'Rua Dr Mário Soares, Porto', 900, 1), -- 10
+('Filipa Travanca', 925468747, 14575968, 'Avenida do Pombal, Felgueiras', 1100, 1), -- 11
+('Marta Andrade', 963258748, 85746958, 'Praça dos Mártires, Braga', 1000, 1), -- 12
+-- Staff
+('Gonçalo Antunes', 961234325, 19327358, 'Rua dos Clérigos, Póvoa de Varzim', 800, 1), -- 13
+('Rita Jaime', 921478781, 14745587, 'Rua da Costa Nova, Viana do Castelo', 700, 1), -- 14
+('Olga Tavares', 912457879, 12548745, 'Estrada da Bota, Lousada', 700, 1), -- 15
+('Rui Elvas', 912457569, 58545875, 'Rua de Guimarães, Felgueiras', 1500, 1), -- 16
+('André Gonçalves', 965823145, 14785964, 'Rua da Felicidade, Lamego', 700, 1), -- 17
+ 
+-- Funcionários Via Rápida
+-- Seguranças
+('António Ulisses', 912548698, 58575968, 'Rua do Cansaço, Amarante', 900, 2), -- 18
+('Marta Miranda', 921458758, 85469741, 'Travessa das Oliveiras, Paredes', 1000, 2), -- 19
+('Patrícia Miranda', 965478586, 75496857, 'Praça da Nossa Senhora, Trofa', 900, 2), -- 20
+-- Bartender
+('Maria Andrade', 912564787, 56586975, 'Praça das Mentiras, Guimarães', 1000, 2), -- 21
+('Rui Lima', 923658749, 75649857, 'Rua dos Limões, Santo Tirso', 1200, 2), -- 22
+('Vasco Ribeiro', 936547895, 12536478, 'Rua da Praceta, Marco de Canaveses', 1000, 2), -- 23
+('Francisco Murta', 936547897, 85698758, 'Travessa Dr Hugo Trindade, Porto', 1000, 2), -- 24
+('André Tavares', 923655697, 12654789, 'Estrada da Ribeira, Penafiel', 900, 2), -- 25
+('Marta Vieira', 912567489, 84764271, 'Rua da Vida, Paredes ',1000, 2), -- 26
+-- Staff
+('Maria Fernandes', 965425658, 85658964, 'Rua da Felicidade, Lamego', 700, 2), -- 27
+('Eunice Tavares', 965485738, 85418964, 'Rua do Cansaço, Porto', 800, 2), -- 28
+('Afonso Cabral', 912354785, 85645923, 'Travessa dos Infestos, Lousada', 800, 2), -- 29
+('Tomás Coimbra', 932254586, 74123697, 'Avenida da Agrela, Lousada', 800, 2), -- 30
+('Martim Restivo', 912546875, 12457695, 'Rua Visconde de Alentém, Paredes', 700, 2), -- 31
+('Rute Albuquerque', 961586962, 25485698,'Praça dos Touros, Póvoa de Varzim', 800, 2), -- 32
+('Márcia Antunes', 912865478, 75623984, 'Travessa da Igreja, Marco de Canaveses', 900, 2), -- 33
+('Filipe Estêvão', 935486258, 12546847, 'Rua do Visconde do Alto, Aveiro', 700, 2), -- 34
+('Núria Madruga', 921254896, 85264895, 'Rua do Monte, Valongo', 700, 2), -- 35
+('Joana Miranda', 923647858, 56235469, 'Rua do Bairral, Matosinhos', 800, 2), -- 36
 
---Funcionários Via Rápida
---Seguranças
-('António Ulisses', 912548698, 58575968, 'Rua do Cansaço, Amarante', 900, 2),
-('Marta Miranda', 921458758, 85469741, 'Travessa das Oliveiras, Paredes', 1000, 2),
-('Patrícia Miranda', 965478586, 75496857, 'Praça da Nossa Senhora, Trofa', 900, 2),
---Bartender
-('Maria Andrade', 912564787, 56586975, 'Praça das Mentiras, Guimarães', 1000, 2),
-('Rui Lima', 923658749, 75649857, 'Rua dos Limões, Santo Tirso', 1200, 2),
-('Vasco Ribeiro', 936547895, 12536478, 'Rua da Praceta, Marco de Canaveses', 1000, 2),
-('Francisco Murta', 936547897, 85698758, 'Travessa Dr Hugo Trindade, Porto', 1000, 2),
-('André Tavares', 923655697, 12654789, 'Estrada da Ribeira, Penafiel', 900, 2),
-('Marta Vieira', 912567489, 84764271, 'Rua da Vida, Paredes ',1000, 2),
---Staff
-('Maria Fernandes', 965425658, 85658964, 'Rua da Felicidade, Lamego', 700, 2),
-('Afonso Cabral', 912354785, 85645923, 'Travessa dos Infestos, Lousada', 800, 2),
-('Tomás Coimbra', 932254586, 74123697, 'Avenida da Agrela, Lousada', 800, 2),
-('Martim Restivo', 912546875, 12457695, 'Rua Visconde de Alentém, Paredes', 700, 2),
-('Rute Albuquerque', 961586962, 25485698,'Praça dos Touros, Póvoa de Varzim', 800, 2),
-('Márcia Antunes', 912865478, 75623984, 'Travessa da Igreja, Marco de Canaveses', 900, 2),
-('Filipe Estêvão', 935486258, 12546847, 'Rua do Visconde do Alto, Aveiro', 700, 2),
-('Núria Madruga', 921254896, 85264895, 'Rua do Monte, Valongo', 700, 2),
-('Joana Miranda', 923647858, 56235469, 'Rua do Bairral, Matosinhos', 800, 2),
+-- Funcionários Pacha
+-- Seguranças
+('Fábio Alves', 911765431, 17845645, 'Travessa da Paz, Matosinhos', 900, 3), -- 37
+('Tatiana Costa', 967715463, 11432782, 'Rua da Luz, Santo Tirso', 900, 3), -- 38
+('Vasco Braga', 911249707, 48215491, 'Rua da Foz, Esposende', 900, 3), -- 39
+('Luana Monte', 914765432, 15467331, 'Rua do Sol, Modivas', 900, 3), -- 40
+('Luís Veloso', 915748758, 56475897, 'Praça dos Limoeiros, Marco de Canaveses', 900, 3), --41
+('Vera Costa', 922575124, 85395612, 'Avenida Eiffel, Trofa', 1000, 3), --42
+('Beatriz Valente', 937520082, 51485132, 'Rua da Gaivota, Vila Nova de Gaia', 1000, 3), -- 43
+('Joaquim Silveira', 910166004, 29585345,'Travessa dos Pescadores, Mindelo', 950, 3), -- 44
+('Rute Castro', 920458789, 52654785, 'Rua dos Cães, Braga', 950, 3), -- 45
+('Silvana Guterres', 925773252, 72517512,'Rua Pacifica, Labruge', 1000, 3), -- 46
+('Simão Torres', 918034051, 12412761,'Rua Cimo de Xeira, Ferreiró', 1000, 3), -- 47
+('Guilherme Rodrigues', 964758157, 12541458, 'Rua da Escola, Esposende', 900, 3), -- 48
+-- Bartender
+('Beatriz Matos', 912657743, 12317654, 'Avenida António Ferreira, Porto', 900, 3), -- 49
+('Fernando Fernandes', 913869442, 90127654, 'Largo da Feira, Leça da Palmeira', 900, 3), -- 50
+('Rui Silva', 927612330, 45110782, 'Rua da Igreja, Rates', 900, 3), -- 51
+('Sara Ribeiro', 923547587, 85758957, 'Avenida de Tires, Lousada', 1000, 3), -- 52
+('Mateus Matias', 916875847, 52565758, 'Praça do Porto, Leça da Palmeira', 1200, 3), -- 53
+('Matilde Matias', 923544587, 85257689, 'Rua dos Cordelinhos, Marco de Canaveses', 1500, 3), -- 54
+('António Alves', 911525687, 84757841, 'Praça das Tristezas, Ofir', 900, 3), -- 55
+('Luana Salgado', 961458748, 85645239, 'Praça do Sofrimento, Matosinhos', 1000, 3), -- 56
+('Isla Trancoso', 968758787, 85417598, 'Estrada dos Mártires, Porto', 1000, 3), -- 57
+('Marta Miranda', 964758157, 12458578, 'Avenida das Bolas, Paços de Ferreira', 1100, 3), -- 58
+('João Rodrigues', 917546234, 43575924, 'Rua da Liberdade, Ofir', 1200, 3), -- 59
+('Miguel Boavista', 927745775, 83925732, 'Avenida 27 de Fevereiro, Aver-o-mar', 1200, 3), -- 60
+('David Silva', 968547342, 36235623, 'Rua dos Cravos, Apúlia', 1200, 3), -- 61
+('Sofia Cunha', 911743753, 76875234, 'Rua do Sobe e Desce, Santo Tirso', 1200, 3), -- 62
+('Gustavo Lima', 965862511, 70085241, 'Avenida do Senhor, Barcelos', 1200, 3), -- 63
+('Hugo Gomes', 911005744, 54254125, 'Rua 31 de Janeiro, Vila do Conde', 1000, 3), -- 64
+-- Staff
+('Hugo Rodrigues', 912547859, 75689578, 'Praça dos Bombeiros, Gondomar', 700, 3), -- 65
+('Simone Martins', 912365869, 74586924, 'Avenida Brasil, Ponte de Lima', 800, 3), -- 66
+('Tiago Andrade', 965874859, 23654785, 'Rua das Tormentas, Amarante', 700, 3), -- 67
+('Tânia Ramos', 936547859, 85245697, 'Rua da Amizade, Penafiel', 800, 3), -- 68
+('Nilton Rodrigues', 913417865, 45637419, 'Rua da Reta, Mindelo', 800, 3), -- 69
+('Sónia Ribas', 965478595, 23654789, 'Avenida da Trindade, Porto', 700, 3), -- 70
+('Simão Lopes', 912564788, 75469978, 'Rua do Estádio, Póvoa de Varzim', 700, 3), -- 71
+('Mariana Marques', 932458769, 41258758, 'Rua do Moinho, Ermesinde', 700, 3), -- 72
+('Rogério Faguntes', 921456781, 17634521, 'Rua do Hotel, Marateca', 700, 3), -- 73
+('Luciana Luís', 962547857, 25658758, 'Praça dos Bombeiros, Gondomar', 800, 3), -- 74
+('Miguel Sozinho', 912326547, 52145147, 'Praça da Poça, Ermesinde', 800, 3), -- 75
+('Ana Raquel Miranda', 962458758, 36547589, 'Rua dos Dados, Santo Tirso', 800, 3), -- 76
+('Marcelo Sousa', 914257586, 85647569, 'Rua da Cidade, Viana do Castelo', 700, 3), -- 77
+('Tânia Couto', 961457878, 65475868, 'Rua do Souto, Porto', 700, 3), -- 78
+('Vânia Morango', 924587589, 65475878, 'Rua do Carmo, Paredes', 700, 3), -- 79
+('Tomás Janeiro', 934578125, 14587596, 'Rua das Melancias, Vila Praia de Âncora', 800, 3), -- 80
+('Filipa Moreira', 961457859, 56124587, 'Travessa dos Sonhos, Contumil', 900, 3), -- 81
+('Gonçalo Nogueira', 931256578, 41545268, 'Rua dos Amores, Famalicão', 700, 3), -- 82
+('Beatriz Fernandes', 964578579, 23651458, 'Praça das Camélias, Guimarães', 700, 3), -- 83
+('Fernando Madureira', 910884523, 77351248, 'Rua do Dragão, Porto', 800, 3), -- 84
+('António Silva', 918883452, 22528514, 'Rua dos Sininhos, Esposende', 700, 3), -- 85
+('Nelson Agra', 917421003, 17563302, 'Avenida dos Banhos, Póvoa de Varzim', 900, 3), -- 86
 
---Funcionários Pacha
---Seguranças
-('Fábio Alves', 911765431, 17845645, 'Travessa da Paz, Matosinhos', 900, 3),
-('Tatiana Costa', 967715463, 11432782, 'Rua da Luz, Santo Tirso', 900, 3),
-('Vasco Braga', 911249707, 48215491, 'Rua da Foz, Esposende', 900, 3),
-('Luana Monte', 914765432, 15467331, 'Rua do Sol, Modivas', 900, 3),
-('Luís Veloso', 915748758, 56475897, 'Praça dos Limoeiros, Marco de Canaveses', 900, 3),
-('Vera Costa', 922575124, 85395612, 'Avenida Eiffel, Trofa', 1000, 3),
-('Beatriz Valente', 937520082, 51485132, 'Rua da Gaivota, Vila Nova de Gaia', 1000, 3),
-('Joaquim Silveira', 910166004, 29585345,'Travessa dos Pescadores, Mindelo', 950, 3),
-('Silvana Guterres', 925773252, 72517512,'Rua Pacifica, Labruge', 1000, 3),
-('Simão Torres', 918034051, 12412761,'Rua Cimo de Xeira, Ferreiró', 1000, 3),
-('Guilherme Rodrigues', 964758157, 12541458, 'Rua da Escola, BragaEsposend', 900, 3),
---Bartender
-('Beatriz Matos', 912657743, 12317654, 'Avenida António Ferreira, Porto', 900, 3),
-('Fernando Fernandes', 913869442, 90127654, 'Largo da Feira, Leça da Palmeira', 900, 3),
-('Rui Silva', 927612330, 45110782, 'Rua da Igreja, Rates', 900, 3),
-('Sara Ribeiro', 923547587, 85758957, 'Avenida de Tires, Lousada', 1000, 3),
-('Mateus Matias', 916875847, 52565758, 'Praça do Porto, Leça da Palmeira', 1200, 3),
-('Matilde Matias', 923544587, 85257689, 'Rua dos Cordelinhos, Marco de Canaveses', 1500, 3),
-('António Alves', 911525687, 84757841, 'Praça das Tristezas, Ofir', 900, 3),
-('Luana Salgado', 961458748, 85645239, 'Praça do Sofrimento, Matosinhos', 1000, 3),
-('Isla Trancoso', 968758787, 85417598, 'Estrada dos Mártires, Porto', 1000, 3),
-('Marta Miranda', 964758157, 12458578, 'Avenida das Bolas, Paços de Ferreira', 1100, 3),
-('João Rodrigues', 917546234, 43575924, 'Rua da Liberdade, Ofir', 1200, 3),
-('Miguel Boavista', 927745775, 83925732, 'Avenida 27 de Fevereiro, Aver-o-mar', 1200, 3),
-('David Silva', 968547342, 36235623, 'Rua dos Cravos, Apúlia', 1200, 3),
-('Sofia Cunha', 911743753, 76875234, 'Rua do Sobe e Desce, Santo Tirso', 1200, 3),
-('Gustavo Lima', 965862511, 70085241, 'Avenida do Senhor, Barcelos', 1200, 3),
-('Hugo Gomes', 911005744, 54254125, 'Rua 31 de Janeiro, Vila do Conde', 1000, 3),
---Staff
-('Hugo Rodrigues', 912547859, 75689578, 'Praça dos Bombeiros, Gondomar', 700, 3),
-('Simone Martins', 912365869, 74586924, 'Avenida Brasil, Ponte de Lima', 800, 3),
-('Tiago Andrade', 965874859, 23654785, 'Rua das Tormentas, Amarante', 700, 3),
-('Tânia Ramos', 936547859, 85245697, 'Rua da Amizade, Penafiel', 800, 3),
-('Nilton Rodrigues', 913417865, 45637419, 'Rua da Reta, Mindelo', 800, 3),
-('Sónia Ribas', 965478595, 23654789, 'Avenida da Trindade, Porto', 700, 3),
-('Simão Lopes', 912564788, 75469978, 'Rua do Estádio, Póvoa de Varzim', 700, 3),
-('Mariana Marques', 932458769, 41258758, 'Rua do Moinho, Ermesinde', 700, 3),
-('Rogério Faguntes', 921456781, 17634521, 'Rua do Hotel, Marateca', 700, 3),
-('Luciana Luís', 962547857, 25658758, 'Praça dos Bombeiros, Gondomar', 800, 3),
-('Miguel Sozinho', 912326547, 52145147, 'Praça da Poça, Ermesinde', 800, 3),
-('Ana Raquel Miranda', 962458758, 36547589, 'Rua dos Dados, Santo Tirso', 800, 3),
-('Marcelo Sousa', 914257586, 85647569, 'Rua da Cidade, Viana do Castelo', 700, 3),
-('Tânia Couto', 961457878, 65475868, 'Rua do Souto, Porto', 700, 3),
-('Vânia Morango', 924587589, 65475878, 'Rua do Carmo, Paredes', 700, 3),
-('Tomás Janeiro', 934578125, 14587596, 'Rua das Melancias, Vila Praia de Âncora', 800, 3),
-('Filipa Moreira', 961457859, 56124587, 'Travessa dos Sonhos, Contumil', 900, 3),
-('Gonçalo Nogueira', 931256578, 41545268, 'Rua dos Amores, Famalicão', 700, 3),
-('Beatriz Fernandes', 964578579, 23651458, 'Praça das Camélias, Guimarães', 700, 3),
-('Fernando Madureira', 910884523, 77351248, 'Rua do Dragão, Porto', 800, 3),
-('António Silva', 918883452, 22528514, 'Rua dos Sininhos, Esposende', 700, 3),
-('Nelson Agra', 917421003, 17563302, 'Avenida dos Banhos, Póvoa de Varzim', 900, 3),
+-- Funcionários Pedra do Couto 
+-- Seguranças
+('Alexandre Costa', 920437231, 51285421, 'Travessa 17 de Junho, Vilar do Pinheiro', 800, 4), -- 87
+('Bruno Gonçalves', 931579931, 84124512, 'Rua Lopes da Silva, Senhora da Hora', 800, 4), -- 88
+('Wilson Santos', 917845321, 45210032, 'Avenica Central, Custóias', 800, 4), -- 89
+('Carla Torres', 912765432, 87120893, 'Rua Alberto Caeiro, Porto', 800, 4), -- 90
+('Álvaro de Campos', 928712330, 12034528, 'Avenida Humberto Delgado, Trofa', 800, 4), -- 91
+('Nuno Ribeiro', 913821666, 15743232, 'Rua da Horta, Estela', 800, 4), -- 92
+-- Bartender
+('Mónica Sintra', 925478475, 25468478, 'Rua dos Prazeres, Custóias', 1000, 4), -- 93
+('Edgar Moreira', 932458718, 52145965, 'Praça das Flores, Vila Nova de Gaia', 1000, 4), -- 94
+('Jéssica Nogueira', 912458747, 35245857, 'Avenida da Ribeira, Vila do Conde', 1200, 4), -- 95
+('André Fonte', 963214400, 12454090, 'Praça 3 de Abril, Vilar do Pinheiro' , 1000, 4), -- 96
+('Luísa Costa', 913287055, 45613387, 'Rua de São Paulo, Moreira de Cónegos', 1000, 4), -- 97
+('Fabiana Gomes', 910252049, 10254452, 'Estrada Longa, Longra', 1100, 4), -- 98
+-- Staff
+('Tómas Ferreira', 911295294, 12452636, 'Rua da Montanha, Trofa', 800, 4), -- 99
+('Vasco Fernandes', 923583413, 25437134, 'Avenida 21 de Novembro, Fradelos', 700, 4), -- 100
+('Fábio Moreira', 933285151, 90953420, 'Travessa D. Afonso Henriques, Lordelo', 800, 4), -- 101
+('Óscar Costa', 917165421, 74357341, 'Rua Adélio Gonçalves, Ermesinde', 750, 4), -- 102
+('Mariana Nunes', 924236540, 10235458, 'Rua das Varandas, Lousada', 700, 4), -- 103
+('Fernando Cabral', 916500124, 31352851, 'Avenida da Nossa Senhora, Perafita', 800, 4), -- 104
+('Sofia Moutinho', 921458748, 36524857, 'Rua de Braga, Braga', 1000, 5), -- 105
+('Júlia Torres', 910349004, 85381231, 'Avenida dos Gatos, Póvoa de Varzim', 900, 5), -- 106 
+('Matilde Mendes', 938003321, 63571234, 'Rua da Horta, Matosinhos', 900, 5), -- 107
 
---Funcionários Pedra do Couto
---Seguranças
-('Alexandre Costa', 920437231, 51285421, 'Travessa 17 de Junho, Vilar do Pinheiro', 800, 4),
-('Bruno Gonçalves', 931579931, 84124512, 'Rua Lopes da Silva, Senhora da Hora', 800, 4),
-('Fernando Cabral', 916500124, 31352851, 'Avenida da Nossa Senhora, Perafita', 900, 4);
---Bartender
---Staff
-
---Funcionários Gare
---Seguranças
---Bartender
---Staff
+-- Funcionários Gare
+-- Seguranças
+('Maria Carregosa', 920537142, 37453486, 'Avenida do Rio, Vila do Conde', 900, 5), -- 108
+('Maria João Correia', 912308877, 76319890, 'Rua da Águia, Valadares', 1000, 5), -- 109
+-- Bartender
+('Francisco Parreira', 927713460, 12396655, 'Rua das Amoras, Navais', 1000, 5), -- 110
+('Sílvia Carregosa', 911663732, 42652781, 'Avenida do Rio, Vila do Conde', 900, 5), -- 111
+-- Staff
+('Jason Antunes', 910254654, 63245801, 'Estrada da Rosa dos Ventos, Paredes', 700, 5), -- 112
+('Miguel Silva', 932145487, 20154587, 'Rua do Livro, Ermesinde', 800, 5), -- 113
+('Rui Ferreira', 910256585, 32514578, 'Praça das Pombas, Vila do Conde', 800, 5), -- 114
+('Gonçalo Caldas', 913788211, 19880076, 'Rua do Mercado, Fão', 1000, 5), -- 115
+('Diogo Leite', 921176444, 89127765, 'Avenida do Mar, Viana do Castelo', 1000, 5), -- 116
+('Marco Marques', 965331020, 76231010, 'Rua do Metro, Azurara', 1000, 5); -- 117
 
 INSERT INTO Hierarquia (idSubalterno, idGerente) VALUES
 (1, 2),
 (3, 2);
 
 INSERT INTO StaffGeral (id) VALUES
-(1),
-(2),
-(3);
+-- Forte
+(13),
+(14),
+(15),
+(16),
+(17),
+
+-- Via Rápida
+(27),
+(28),
+(29),
+(30),
+(31),
+(32),
+(33),
+(34),
+(35),
+(36),
+
+-- Pacha
+(65),
+(66),
+(67),
+(68),
+(69),
+(70),
+(71),
+(72),
+(73),
+(74),
+(75),
+(76),
+(77),
+(78),
+(79),
+(80),
+(81),
+(82),
+(83),
+(84),
+(85),
+(86),
+
+-- Pedra do Couto
+(99),
+(100),
+(101),
+(102),
+(103),
+(104),
+(105),
+(106),
+(107),
+
+-- Gare
+(112),
+(113),
+(114),
+(115),
+(116),
+(117);
+
 
 INSERT INTO Seguranca (id, licenca) VALUES
-(4, 156875);
+
+-- Forte
+(1, 456817),
+(2, 245612),
+(3, 931258),
+(4, 835678),
+(5, 157136),
+(6, 137809),
+
+-- Via Rápida
+(18, 352561),
+(19, 812758),
+(20, 151751),
+
+-- Pacha
+(37, 123768),
+(38, 912839),
+(39, 123152),
+(40, 346342),
+(41, 832491),
+(42, 102349),
+(43, 831758),
+(44, 875368),
+(45, 736575),
+(46, 812651),
+(47, 241511),
+(48, 439781),
+
+-- Pedra do Couto
+(87, 435235),
+(88, 103901),
+(89, 781273),
+(90, 214127),
+(91, 129419),
+(92, 912849),
+
+-- Gare
+(108, 981293),
+(109, 213812);
 
 INSERT INTO Bartender (id, nivelFormacao) VALUES
-(5, 2);
+-- Forte
+(7, 3),
+(8, 3),
+(9, 2),
+(10, 3),
+(11, 2),
+(12, 3),
+
+-- Via Rápida
+(21, 2),
+(22, 2),
+(23, 3),
+(24, 1),
+(25, 2),
+(26, 2),
+
+-- Pacha
+(49, 2),
+(50, 3),
+(51, 2),
+(52, 2),
+(53, 3),
+(54, 1),
+(55, 2),
+(56, 2),
+(57, 3),
+(58, 3),
+(59, 2),
+(60, 3),
+(61, 2),
+(62, 3),
+(63, 2),
+(64, 3),
+
+-- Pedra do Couto
+(93, 3),
+(94, 1),
+(95, 2),
+(96, 2),
+(97, 3),
+(98, 2),
+
+-- Gare
+(110, 2),
+(111, 1);
 
 INSERT INTO LoungeStaffGeral (idStaff, idLounge) VALUES
-(1, 1);
+-- Forte
+(13, 1),
+(14, 2),
+
+-- Via Rápida
+(27, 3),
+(28, 4),
+(29, 5),
+
+-- Pacha
+(65, 6),
+(66, 7),
+(67, 7),
+(68, 8),
+(69, 8),
+(70, 9),
+(71, 9),
+(72, 10),
+(73, 10),
+
+-- Pedra do Couto
+(99, 11),
+(100, 12),
+(101, 13),
+(102, 14),
+
+-- Gare
+(112, 15),
+(113, 16),
+(114, 16);
 
 INSERT INTO CaixasStaffGeral (idStaff, idCaixa) VALUES
-(2, 1);
+--Forte
+(15, 1),
+(16, 1),
+
+-- Via Rápida
+(30, 2),
+(31, 2),
+(32, 2),
+(33, 3),
+(34, 3),
+
+-- Pacha
+(74, 4),
+(75, 4),
+(76, 5),
+(77, 5),
+(78, 6),
+(79, 6),
+(80, 7),
+(81, 7),
+(82, 8),
+(83, 8),
+
+-- Pedra do Couto
+(103, 9),
+(104, 10),
+(105, 11),
+
+-- Gare
+(115, 12),
+(116, 12);
 
 INSERT INTO BengaleiroStaffGeral (idStaff, idBengaleiro) VALUES
-(3, 1);
+-- Forte
+(17, 1),
+
+-- Via Rápida
+(35, 2),
+(36, 2),
+
+-- Pacha
+(84, 3),
+(85, 4),
+(86, 5),
+
+-- Pedra do Couto
+(106, 6),
+(107, 7),
+
+-- Gare
+(117, 8);
 
 INSERT INTO BarBartender (idBartender, idBar) VALUES
-(5, 1);
+-- Forte
+(7, 1),
+(8, 1),
+(9, 2),
+(10, 2),
+(11, 3),
+(12, 3),
+
+-- Via Rápida
+(21, 4),
+(22, 4),
+(23, 4),
+(24, 5),
+(25, 5),
+(26, 5),
+
+-- Pacha
+(49, 6),
+(50, 6),
+(51, 7),
+(52, 7),
+(53, 8),
+(54, 8),
+(55, 9),
+(56, 9),
+(57, 10),
+(58, 10),
+(59, 11),
+(60, 11),
+(61, 12),
+(62, 12),
+(63, 13),
+(64, 13),
+
+-- Pedra do Couto
+(93, 14),
+(94, 14),
+(95, 15),
+(96, 15),
+(97, 16),
+(98, 16),
+
+-- Gare
+(110, 17),
+(111, 17);
 
 INSERT INTO PistaSeguranca (idSeguranca, idPista) VALUES
-(4, 1);
+-- Forte
+(1, 1),
+(2, 1),
+(3, 1),
+(4, 2),
+(5, 2),
+(6, 2),
 
---SELECT * FROM "Pessoa";
---SELECT * FROM "Discoteca";
---SELECT * FROM "Membro";
---SELECT * FROM "Reserva";
---SELECT * FROM "Lounge";
---SELECT * FROM "ReservaLounge";
---SELECT * FROM "CaixasPagamento";
---SELECT * FROM "Bengaleiro";
---SELECT * FROM "Pista";
---SELECT * FROM "Artista";
+-- Via Rápida
+(18, 3),
+(19, 3),
+(20, 3),
+
+-- Pacha
+(37, 4),
+(38, 4),
+(39, 5),
+(40, 5),
+(41, 6),
+(42, 6),
+(43, 7),
+(44, 7),
+(45, 8),
+(46, 8),
+(47, 9),
+(48, 9),
+
+-- Pedra do Couto
+(87, 10),
+(88, 10),
+(89, 10),
+(90, 11),
+(91, 11),
+(92, 11),
+
+-- Gare
+(108, 12),
+(109, 12);
+
+/*
+SELECT * FROM "Pessoa";
+SELECT * FROM "Discoteca";
+SELECT * FROM "Membro";
+SELECT * FROM "Reserva";
+SELECT * FROM "Lounge";
+SELECT * FROM "ReservaLounge";
+SELECT * FROM "CaixasPagamento";
+SELECT * FROM "Bengaleiro";
+SELECT * FROM "Pista";
+SELECT * FROM "Artista";
 --SELECT * FROM "Atuacao";
---SELECT * FROM "Bar";
---SELECT * FROM "Bebida";
---SELECT * FROM "BarBebida";
---SELECT * FROM "Funcionario";
+SELECT * FROM "Bar";
+SELECT * FROM "Bebida";
+SELECT * FROM "BarBebida";
+SELECT * FROM "Funcionario";
 --SELECT * FROM "Hierarquia";
---SELECT * FROM "StaffGeral";
---SELECT * FROM "Seguranca";
---SELECT * FROM "Bartender";
---SELECT * FROM "LoungeStaffGeral";
---SELECT * FROM "CaixasStaffGeral";
---SELECT * FROM "BengaleiroStaffGeral";
---SELECT * FROM "BarBartender";
---SELECT * FROM "PistaSeguranca";
+SELECT * FROM "StaffGeral";
+SELECT * FROM "Seguranca";
+SELECT * FROM "Bartender";
+SELECT * FROM "LoungeStaffGeral";
+SELECT * FROM "CaixasStaffGeral";
+SELECT * FROM "BengaleiroStaffGeral";
+SELECT * FROM "BarBartender";
+SELECT * FROM "PistaSeguranca";
+*/
