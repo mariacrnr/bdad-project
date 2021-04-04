@@ -597,57 +597,57 @@ INSERT INTO Artista (nome, nrTelemovel, cache, tipo) VALUES
 -- Funk
 ('MC Teteu', 963434888, 1000, 'residente'),  -- 1
 ('PK', 939912880, 1000, 'convidado'), -- 2
-('MC Kevinho', 929888232, 1000, 'convidado'), -- 3
-('Anitta', 911877778, 1000, 'convidado'), -- 4
-('Dj Guuga', 910444440, 1000, 'convidado'), -- 5
-('MC Don Juan', 933734111, 1000, 'convidado'), -- 6
-('MC Kevin o Chris', 931849253, 1000, 'convidado'), -- 7
+('MC Kevinho', 929888232, 5000, 'convidado'), -- 3
+('Anitta', 911877778, 5000, 'convidado'), -- 4
+('Dj Guuga', 910444440, 1200, 'convidado'), -- 5
+('MC Don Juan', 933734111, 80, 'residente'), -- 6
+('MC Kevin o Chris', 931849253, 3000, 'convidado'), -- 7
 
 -- Trance
-('Vini Vici', 918998944, 1000, 'residente'), -- 8
-('Timmy Trumpet', 939758213, 1000, 'convidado'), -- 9
-('Mandragora', 911123423, 1000, 'convidado'), -- 10
-('Blastoyz', 930095010, 1000, 'residente'), -- 11
-('Aura Vortex', 915555234, 1000, 'convidado'), -- 12
-('Babalos', 910420696, 1000, 'residente'), -- 13
-('Menumas', 918432187, 1000, 'convidado'), -- 14
-('Hilight Tribe', 911550430, 1000, 'convidado'), -- 15 
+('Vini Vici', 918998944, 4000, 'residente'), -- 8
+('Timmy Trumpet', 939758213, 5000, 'convidado'), -- 9
+('Mandragora', 911123423, 3000, 'convidado'), -- 10
+('Blastoyz', 930095010, 800, 'convidado'), -- 11
+('Aura Vortex', 915555234, 600, 'convidado'), -- 12
+('Babalos', 910420696, 2000, 'residente'), -- 13
+('Menumas', 918432187, 800, 'convidado'), -- 14
+('Hilight Tribe', 911550430, 2000, 'convidado'), -- 15 
 
 -- House
-('Swedish House Mafia', 910858585, 1000, 'residente'), -- 16 
-('Tiësto', 930505000, 1000, 'convidado'), -- 17
-('Calvin Harris', 912505505, 1000, 'convidado'), -- 18
-('Avicii', 924434715, 1000, 'convidado'), -- 19
-('Zedd', 919583995, 1000, 'residente'), -- 20
-('Dmitri Vegas & Like Mike', 939539522, 1000, 'convidado'), -- 21
-('David Guetta', 937770099, 1000, 'convidado'), --22
+('Swedish House Mafia', 910858585, 10000, 'residente'), -- 16 
+('Tiësto', 930505000, 4000, 'convidado'), -- 17
+('Calvin Harris', 912505505, 5000, 'convidado'), -- 18
+('Avicii', 924434715, 6000, 'convidado'), -- 19
+('Zedd', 919583995, 4000, 'residente'), -- 20
+('Dmitri Vegas & Like Mike', 939539522, 8000, 'convidado'), -- 21
+('David Guetta', 937770099, 6000, 'convidado'), --22
 
 -- 90s
 ('Gala', 934564568, 3000, 'convidado'), -- 23
-('Spice Girls', 917523345, 2500, 'convidado'), -- 24
-('Nightcrawlers', 932832382, 1000, 'convidado'), -- 25
-('Daft Punk', 931134341, 1000, 'residente'), -- 26
-('Sash!', 932211999, 1000, 'convidado'), -- 27
-('Kris Kross', 911450450, 1000, 'convidado'), -- 28
-('The Prodigy', 930055660, 1000, 'convidado'), -- 29
+('Spice Girls', 917523345, 5000, 'convidado'), -- 24
+('blink-182', 932832382, 8000, 'convidado'), -- 25
+('Daft Punk', 931134341, 5000, 'residente'), -- 26
+('Da Weasel', 932211999, 1000, 'convidado'), -- 27
+('Goo Goo Dolls', 911450450, 5000, 'convidado'), -- 28
+('Ornatos Violeta', 930055660, 2000, 'convidado'), -- 29
 
 -- Kizomba
-('C4 Pedro', 936234234, 1000, 'residente'), -- 30
-('Nelson Freitas', 916610486, 1000, 'convidado'), -- 31
+('C4 Pedro', 936234234, 1500, 'residente'), -- 30
+('Nelson Freitas', 916610486, 1500, 'convidado'), -- 31
 ('Master Jake', 939980486, 1000, 'convidado'), -- 32
-('Anselmo Ralph', 916507650, 1000, 'convidado'), -- 33
+('Anselmo Ralph', 916507650, 2000, 'convidado'), -- 33
 ('Badoxa', 925004950, 1000, 'convidado'), -- 34
-('Zona 5', 913319319, 1000, 'convidado'), -- 35
-('G-Amado', 936355224, 1000, 'convidado'), -- 36
+('Zona 5', 913319319, 400, 'convidado'), -- 35
+('G-Amado', 936355224, 300, 'convidado'), -- 36
 
 -- Reggaetton
 ('Nio Garcia', 919133215, 1000, 'convidado'), -- 37
-('Nicky Jam', 936677576, 1000, 'residente'), -- 38
-('Ozuna', 918432924, 1000, 'convidado'), -- 39
-('Bad Bunny', 922300232, 1000, 'convidado'), -- 40
-('KAROL G', 911405888, 1000, 'convidado'), -- 41
-('Maluma', 939000265, 1000, 'convidado'), -- 42
-('J Balvin', 932547666, 1000, 'convidado'); -- 44
+('Nicky Jam', 936677576, 2000, 'residente'), -- 38
+('Ozuna', 918432924, 200, 'convidado'), -- 39
+('Bad Bunny', 922300232, 800, 'convidado'), -- 40
+('KAROL G', 911405888, 700, 'convidado'), -- 41
+('Maluma', 939000265, 2000, 'convidado'), -- 42
+('J Balvin', 932547666, 3000, 'convidado'); -- 43
 
 
 -- Areas Livres para gastar nos outros espaços: Forte: 720 , VR: 1800, Pacha: 6150, Pedra: 2100, Gare: 360
@@ -658,25 +658,67 @@ INSERT INTO Pista (nome, areaEspaco, generoMusica, idResidente, idDiscoteca) VAL
 ('Gaiola', 400.0, 'funk', 1, 1), -- 2
 
 -- Pistas Via Rápida
-('In our hearts', 1000.0, 'trance', 11, 2), -- 3
+('Sarrar até nanar', 1000.0, 'funk', 6, 2), -- 3
 
 -- Pistas Pacha
 ('Boomusic', 400.0, '90s', NULL, 3), -- 4
 ('Cristalina', 1000.0, 'trance', 8, 3), -- 5
 ('Ofir de Janeiro', 1000.0, 'funk', NULL, 3), -- 6 
 ('Casa abaixo', 400.0, 'house', 16, 3), -- 7
-('Rosso', 800.0, 'kizomba', 30, 3), -- 8
-('Jamal', 600.0, 'reggaeton', 38, 3), -- 9
+('Mel', 800.0, 'kizomba', 30, 3), -- 8
+('Latin Vibez', 600.0, 'reggaeton', 38, 3), -- 9
 
 -- Pistas Pedra do Couto
-('Casa de papel', 800.0, 'house', 20, 4),
-('Ajuntamentos', 600.0, 'kizomba', NULL, 4),
+('Casa de papel', 800.0, 'house', 20, 4), -- 10
+('Ajuntamentos', 600.0, 'kizomba', NULL, 4), -- 11
 
 -- Pistas Gare
-('Venda nova', 300.0, 'trance', 13, 5);
+('Gnomos', 300.0, 'trance', 13, 5); -- 12
 
 INSERT INTO Atuacao (idArtista, idPista, horaComeco, horaFim, duracao) VALUES
-(2, 1, '01:00', '03:00', '02:00');
+-- Não usar atuações de: 1, 6, 8, 13, 16, 20, 26, 30, 38
+(24, 1, '01:00', '03:00', '02:00'),
+(27, 1, '03:00', '05:00', '02:00'),
+
+(2, 2, '02:00', '03:00', '01:00'),
+(7, 2, '03:00', '04:30', '01:30'),
+(4, 2, '04:30', '06:00', '01:30'),
+
+(3, 3, '03:30', '05:00', '01:30'),
+(2, 3, '05:00', '06:00', '01:00'),
+
+(23, 4, '01:00', '02:30', '01:30'),
+(29, 4, '02:30', '04:30', '02:30'),
+(25, 4, '04:30', '06:00', '01:30'),
+
+(9, 5, '02:30', '03:30', '01:00'),
+(12, 5, '03:30', '05:00', '01:30'),
+(10, 5, '05:00', '06:00', '01:10'),
+
+(5, 6, '01:30', '03:30', '01:00'),
+(7, 6, '03:30', '05:00', '01:30'),
+
+(17, 7, '01:00', '02:30', '01:30'),
+(19, 7, '02:30', '04:00', '01:30'),
+
+(31, 8, '00:00', '01:30', '01:30'),
+(36, 8, '01:30', '03:00', '01:30'),
+(34, 8, '03:00', '04:00', '01:00'),
+
+(39, 9, '01:00', '02:00', '01:00'),
+(43, 9, '02:00', '03:00', '01:00'),
+(41, 9, '03:00', '04:00', '01:00'),
+(40, 9, '04:00', '05:00', '01:00'),
+
+(22, 10, '02:00', '04:00', '02:00'),
+(18, 10, '04:00', '06:00', '02:00'),
+
+(35, 11, '01:30', '03:00', '01:30'),
+(33, 11, '03:00', '04:00', '01:00'),
+(32, 11, '04:00', '05:00', '01:00'),
+
+(14, 12, '02:30', '04:00', '01:30'),
+(15, 12, '03:00', '05:00', '02:00');
 
 INSERT INTO Bar (idPista) VALUES
 -- Bares Forte S João
@@ -1468,7 +1510,7 @@ INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VA
 -- Funcionários Forte S. João
 -- Seguranças
 ('Rafael Ribeiro', 933384731, 18354932, 'Avenida da Boavista, Porto', 900, 1), -- 1
-('João Silva', 965874785, 14254158, 'Rua das Flores, Penafiel', 800, 1), --2
+('João Silva', 965874785, 14254158, 'Rua das Flores, Penafiel', 1500, 1), --2
 ('Marta Aguiar', 916857584, 12548579, 'Rua Primeiro de Maio, Póvoa de Varzim', 900, 1), -- 3
 ('Francisco Tojeiro', 932456871, 12546987, 'Praça do 25 de Abril, Matosinhos', 900, 1), -- 4
 ('Luísa Rentes', 921458759, 14256874, 'Avenida do Ramalhete, Aveiro', 800, 1), -- 5
@@ -1478,7 +1520,7 @@ INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VA
 ('Leonor Lopes', 918734561, 14562943, 'Travessa dos Santos, Guimarães', 1000, 1), -- 8
 ('Manuela Quinaz', 912365987, 25469874, 'Rua Dr Mário Soares, Porto', 900, 1), -- 9
 ('Joana Alves', 963254787, 12541578, 'Rua Dr Mário Soares, Porto', 900, 1), -- 10
-('Filipa Travanca', 925468747, 14575968, 'Avenida do Pombal, Felgueiras', 1100, 1), -- 11
+('Filipa Travanca', 925468747, 14575968, 'Avenida do Pombal, Felgueiras', 1000, 1), -- 11
 ('Marta Andrade', 963258748, 85746958, 'Praça dos Mártires, Braga', 1000, 1), -- 12
 -- Staff
 ('Gonçalo Antunes', 961234325, 19327358, 'Rua dos Clérigos, Póvoa de Varzim', 800, 1), -- 13
@@ -1496,7 +1538,7 @@ INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VA
 ('Maria Andrade', 912564787, 56586975, 'Praça das Mentiras, Guimarães', 1000, 2), -- 21
 ('Rui Lima', 923658749, 75649857, 'Rua dos Limões, Santo Tirso', 1200, 2), -- 22
 ('Vasco Ribeiro', 936547895, 12536478, 'Rua da Praceta, Marco de Canaveses', 1000, 2), -- 23
-('Francisco Murta', 936547897, 85698758, 'Travessa Dr Hugo Trindade, Porto', 1000, 2), -- 24
+('Francisco Murta', 936547897, 85698758, 'Travessa Dr Hugo Trindade, Porto', 1400, 2), -- 24
 ('André Tavares', 923655697, 12654789, 'Estrada da Ribeira, Penafiel', 900, 2), -- 25
 ('Marta Vieira', 912567489, 84764271, 'Rua da Vida, Paredes ',1000, 2), -- 26
 -- Staff
@@ -1508,7 +1550,7 @@ INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VA
 ('Rute Albuquerque', 961586962, 25485698,'Praça dos Touros, Póvoa de Varzim', 800, 2), -- 32
 ('Márcia Antunes', 912865478, 75623984, 'Travessa da Igreja, Marco de Canaveses', 900, 2), -- 33
 ('Filipe Estêvão', 935486258, 12546847, 'Rua do Visconde do Alto, Aveiro', 700, 2), -- 34
-('Núria Madruga', 921254896, 85264895, 'Rua do Monte, Valongo', 700, 2), -- 35
+('Núria Madruga', 921254896, 85264895, 'Rua do Monte, Valongo', 1000, 2), -- 35
 ('Joana Miranda', 923647858, 56235469, 'Rua do Bairral, Matosinhos', 800, 2), -- 36
 
 -- Funcionários Pacha
@@ -1519,7 +1561,7 @@ INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VA
 ('Luana Monte', 914765432, 15467331, 'Rua do Sol, Modivas', 900, 3), -- 40
 ('Luís Veloso', 915748758, 56475897, 'Praça dos Limoeiros, Marco de Canaveses', 900, 3), --41
 ('Vera Costa', 922575124, 85395612, 'Avenida Eiffel, Trofa', 1000, 3), --42
-('Beatriz Valente', 937520082, 51485132, 'Rua da Gaivota, Vila Nova de Gaia', 1000, 3), -- 43
+('Beatriz Valente', 937520082, 51485132, 'Rua da Gaivota, Vila Nova de Gaia', 1500, 3), -- 43
 ('Joaquim Silveira', 910166004, 29585345,'Travessa dos Pescadores, Mindelo', 950, 3), -- 44
 ('Rute Castro', 920458789, 52654785, 'Rua dos Cães, Braga', 950, 3), -- 45
 ('Silvana Guterres', 925773252, 72517512,'Rua Pacifica, Labruge', 1000, 3), -- 46
@@ -1530,7 +1572,7 @@ INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VA
 ('Fernando Fernandes', 913869442, 90127654, 'Largo da Feira, Leça da Palmeira', 900, 3), -- 50
 ('Rui Silva', 927612330, 45110782, 'Rua da Igreja, Rates', 900, 3), -- 51
 ('Sara Ribeiro', 923547587, 85758957, 'Avenida de Tires, Lousada', 1000, 3), -- 52
-('Mateus Matias', 916875847, 52565758, 'Praça do Porto, Leça da Palmeira', 1200, 3), -- 53
+('Mateus Matias', 916875847, 52565758, 'Praça do Porto, Leça da Palmeira', 1800, 3), -- 53
 ('Matilde Matias', 923544587, 85257689, 'Rua dos Cordelinhos, Marco de Canaveses', 1500, 3), -- 54
 ('António Alves', 911525687, 84757841, 'Praça das Tristezas, Ofir', 900, 3), -- 55
 ('Luana Salgado', 961458748, 85645239, 'Praça do Sofrimento, Matosinhos', 1000, 3), -- 56
@@ -1555,7 +1597,7 @@ INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VA
 ('Luciana Luís', 962547857, 25658758, 'Praça dos Bombeiros, Gondomar', 800, 3), -- 74
 ('Miguel Sozinho', 912326547, 52145147, 'Praça da Poça, Ermesinde', 800, 3), -- 75
 ('Ana Raquel Miranda', 962458758, 36547589, 'Rua dos Dados, Santo Tirso', 800, 3), -- 76
-('Marcelo Sousa', 914257586, 85647569, 'Rua da Cidade, Viana do Castelo', 700, 3), -- 77
+('Marcelo Sousa', 914257586, 85647569, 'Rua da Cidade, Viana do Castelo', 1200, 3), -- 77
 ('Tânia Couto', 961457878, 65475868, 'Rua do Souto, Porto', 700, 3), -- 78
 ('Vânia Morango', 924587589, 65475878, 'Rua do Carmo, Paredes', 700, 3), -- 79
 ('Tomás Janeiro', 934578125, 14587596, 'Rua das Melancias, Vila Praia de Âncora', 800, 3), -- 80
@@ -1568,12 +1610,12 @@ INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VA
 
 -- Funcionários Pedra do Couto 
 -- Seguranças
-('Alexandre Costa', 920437231, 51285421, 'Travessa 17 de Junho, Vilar do Pinheiro', 800, 4), -- 87
+('Alexandre Costa', 920437231, 51285421, 'Travessa 17 de Junho, Vilar do Pinheiro', 900, 4), -- 87
 ('Bruno Gonçalves', 931579931, 84124512, 'Rua Lopes da Silva, Senhora da Hora', 800, 4), -- 88
-('Wilson Santos', 917845321, 45210032, 'Avenica Central, Custóias', 800, 4), -- 89
-('Carla Torres', 912765432, 87120893, 'Rua Alberto Caeiro, Porto', 800, 4), -- 90
+('Wilson Santos', 917845321, 45210032, 'Avenica Central, Custóias', 900, 4), -- 89
+('Carla Torres', 912765432, 87120893, 'Rua Alberto Caeiro, Porto', 1100, 4), -- 90
 ('Álvaro de Campos', 928712330, 12034528, 'Avenida Humberto Delgado, Trofa', 800, 4), -- 91
-('Nuno Ribeiro', 913821666, 15743232, 'Rua da Horta, Estela', 800, 4), -- 92
+('Nuno Ribeiro', 913821666, 15743232, 'Rua da Horta, Estela', 900, 4), -- 92
 -- Bartender
 ('Mónica Sintra', 925478475, 25468478, 'Rua dos Prazeres, Custóias', 1000, 4), -- 93
 ('Edgar Moreira', 932458718, 52145965, 'Praça das Flores, Vila Nova de Gaia', 1000, 4), -- 94
@@ -1598,18 +1640,150 @@ INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VA
 ('Maria João Correia', 912308877, 76319890, 'Rua da Águia, Valadares', 1000, 5), -- 109
 -- Bartender
 ('Francisco Parreira', 927713460, 12396655, 'Rua das Amoras, Navais', 1000, 5), -- 110
-('Sílvia Carregosa', 911663732, 42652781, 'Avenida do Rio, Vila do Conde', 900, 5), -- 111
+('Sílvia Carregosa', 911663732, 42652781, 'Avenida do Rio, Vila do Conde', 1200, 5), -- 111
 -- Staff
-('Jason Antunes', 910254654, 63245801, 'Estrada da Rosa dos Ventos, Paredes', 700, 5), -- 112
+('Jason Antunes', 910254654, 63245801, 'Estrada da Rosa dos Ventos, Paredes', 800, 5), -- 112
 ('Miguel Silva', 932145487, 20154587, 'Rua do Livro, Ermesinde', 800, 5), -- 113
-('Rui Ferreira', 910256585, 32514578, 'Praça das Pombas, Vila do Conde', 800, 5), -- 114
+('Rui Ferreira', 910256585, 32514578, 'Praça das Pombas, Vila do Conde', 2000, 5), -- 114
 ('Gonçalo Caldas', 913788211, 19880076, 'Rua do Mercado, Fão', 1000, 5), -- 115
 ('Diogo Leite', 921176444, 89127765, 'Avenida do Mar, Viana do Castelo', 1000, 5), -- 116
 ('Marco Marques', 965331020, 76231010, 'Rua do Metro, Azurara', 1000, 5); -- 117
 
 INSERT INTO Hierarquia (idSubalterno, idGerente) VALUES
+-- Funcionários Forte S. João
+-- Seguranças
 (1, 2),
-(3, 2);
+(3, 2),
+(4, 2),
+(5, 2),
+(6, 2),
+-- Bartender
+(8, 7),
+(9, 7),
+(10, 7),
+(11, 7),
+(12, 7),
+-- Staff Geral
+(13, 16),
+(14, 16),
+(15, 16),
+(17, 16),
+
+-- Funcionários Via Rápida
+-- Seguranças
+(18, 19),
+(20, 19),
+
+-- Bartender
+(21, 24),
+(22, 24),
+(23, 24),
+(25, 24),
+(26, 24),
+
+-- Staff Geral
+(27, 35),
+(28, 35),
+(29, 35),
+(30, 35),
+(31, 35),
+(32, 35),
+(33, 35),
+(34, 35),
+(36, 35),
+
+-- Funcionários Pacha
+-- Seguranças
+(37, 43),
+(38, 43),
+(39, 43),
+(40, 43),
+(41, 43),
+(42, 43),
+(44, 43),
+(45, 43),
+(46, 43),
+(47, 43),
+(48, 43),
+
+-- Bartender
+(49, 53),
+(50, 53),
+(51, 53),
+(52, 53),
+(54, 53),
+(55, 53),
+(56, 53),
+(57, 53),
+(58, 53),
+(59, 53),
+(60, 53),
+(61, 53),
+(62, 53),
+(63, 53),
+(64, 53),
+
+-- Staff Geral
+(65, 77),
+(66, 77),
+(67, 77),
+(68, 77),
+(69, 77),
+(70, 77),
+(71, 77),
+(72, 77),
+(73, 77),
+(74, 77),
+(75, 77),
+(76, 77),
+(78, 77),
+(79, 77),
+(80, 77),
+(81, 77),
+(82, 77),
+(83, 77),
+(84, 77),
+(85, 77),
+(86, 77),
+
+-- Funcionários Pedra do Couto
+-- Seguranças
+(87, 90),
+(88, 90),
+(89, 90),
+(91, 90),
+(92, 90),
+
+-- Bartender
+(93, 95),
+(94, 95),
+(96, 95),
+(97, 95),
+(98, 95),
+
+-- Staff Geral
+(99,105),
+(100,105),
+(101,105),
+(102,105),
+(103,105),
+(104,105),
+(106,105),
+(107,105),
+
+-- Funcionários Gare
+-- Seguranças
+(108, 109),
+
+-- Bartender
+(110, 111),
+
+-- Staff
+(112, 114),
+(113, 114),
+(115, 114),
+(116, 114),
+(117, 114);
 
 INSERT INTO StaffGeral (id) VALUES
 -- Forte
@@ -1718,50 +1892,50 @@ INSERT INTO Seguranca (id, licenca) VALUES
 
 INSERT INTO Bartender (id, nivelFormacao) VALUES
 -- Forte
-(7, 3),
-(8, 3),
-(9, 2),
-(10, 3),
+(7, 3), -- Chefe
+(8, 2),
+(9, 1),
+(10, 1),
 (11, 2),
 (12, 3),
 
 -- Via Rápida
-(21, 2),
+(21, 1),
 (22, 2),
-(23, 3),
-(24, 1),
+(23, 1),
+(24, 3), -- Chefe
 (25, 2),
-(26, 2),
+(26, 1),
 
 -- Pacha
 (49, 2),
-(50, 3),
+(50, 1),
 (51, 2),
 (52, 2),
-(53, 3),
+(53, 3), -- Chefe
 (54, 1),
 (55, 2),
-(56, 2),
-(57, 3),
+(56, 1),
+(57, 1),
 (58, 3),
 (59, 2),
-(60, 3),
+(60, 1),
 (61, 2),
 (62, 3),
-(63, 2),
-(64, 3),
+(63, 1),
+(64, 1),
 
 -- Pedra do Couto
-(93, 3),
+(93, 1),
 (94, 1),
-(95, 2),
+(95, 3), -- Chefe
 (96, 2),
-(97, 3),
+(97, 2),
 (98, 2),
 
 -- Gare
 (110, 2),
-(111, 1);
+(111, 3); -- Chefe
 
 INSERT INTO LoungeStaffGeral (idStaff, idLounge) VALUES
 -- Forte
@@ -1935,6 +2109,7 @@ INSERT INTO PistaSeguranca (idSeguranca, idPista) VALUES
 (108, 12),
 (109, 12);
 
+
 /*
 SELECT * FROM "Pessoa";
 SELECT * FROM "Discoteca";
@@ -1946,12 +2121,12 @@ SELECT * FROM "CaixasPagamento";
 SELECT * FROM "Bengaleiro";
 SELECT * FROM "Pista";
 SELECT * FROM "Artista";
---SELECT * FROM "Atuacao";
+SELECT * FROM "Atuacao";
 SELECT * FROM "Bar";
 SELECT * FROM "Bebida";
 SELECT * FROM "BarBebida";
 SELECT * FROM "Funcionario";
---SELECT * FROM "Hierarquia";
+SELECT * FROM "Hierarquia";
 SELECT * FROM "StaffGeral";
 SELECT * FROM "Seguranca";
 SELECT * FROM "Bartender";
