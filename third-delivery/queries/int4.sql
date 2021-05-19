@@ -3,3 +3,5 @@
 .mode	columns
 .headers	on
 .nullvalue	NULL
+
+-- SELECT * FROM StaffGeral NATURAL JOIN Funcionario;

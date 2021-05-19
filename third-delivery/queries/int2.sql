@@ -5,7 +5,7 @@
 .headers	on
 .nullvalue	NULL
 
-SELECT nome 
+SELECT nome As VIPsSemReservas
 FROM Pessoa NATURAL JOIN Membro 
 WHERE tipo LIKE "VIP" AND BI NOT IN(
     SELECT DISTINCT BI 

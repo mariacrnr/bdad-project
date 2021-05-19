@@ -1,28 +1,48 @@
 -- Área de espaço livre (não ocupado pelas zonas) em cada discoteca
--- INCOMPLETO FALTA SOMAR LINHAS E SUBTRAIR À AREA TOTAL COMO SE FAZ I DONT KNOW MAS DEPOIS DESCUBRO ASS MARIA
+-- NOTA: Dizia para preferir joins a subqueries mas aqui não sei se dá para fazer com joins, procurar maneira ?? ASS MARIA
+
 .mode	columns
 .headers	on
 .nullvalue	NULL
 
-/*SELECT DISTINCT Lounge.idDiscoteca, Lounge.areaEspaco AS areaLounge, CaixaPagamento.areaEspaco AS areaCaixa, 
-Pista.areaEspaco AS areaPista, Bengaleiro.areaEspaco AS areaBengaleiro
-FROM Lounge JOIN CaixaPagamento USING(idDiscoteca) JOIN Bengaleiro USING(idDiscoteca) JOIN Pista USING(idDiscoteca);*/
+-- Uso de Views é pertinente para a modularidade da interrogação dado que apresenta várias sub-interrogações.
 
-SELECT DISTINCT * FROM (
-    SELECT idDiscoteca, SUM(Lounge.areaEspaco) AS areaLounge 
-    FROM Lounge 
-    GROUP BY (idDiscoteca)) JOIN (
-        SELECT idDiscoteca, SUM(CaixaPagamento.areaEspaco) AS areaCaixa 
-        FROM CaixaPagamento 
-        GROUP BY (idDiscoteca)) USING(idDiscoteca) JOIN (
-            SELECT idDiscoteca, SUM(Bengaleiro.areaEspaco) AS areaBengaleiro 
-            FROM Bengaleiro GROUP BY (idDiscoteca)) 
-            USING(idDiscoteca) JOIN (
-                SELECT idDiscoteca, SUM(Pista.areaEspaco) AS areaPista 
-                FROM Pista 
-                GROUP BY (idDiscoteca)) USING(idDiscoteca);
+DROP VIEW IF EXISTS areaLounge;
+DROP VIEW IF EXISTS areaCaixa;
+DROP VIEW IF EXISTS areaBengaleiro;
+DROP VIEW IF EXISTS areaPista;
+DROP VIEW IF EXISTS areaOcupada;
 
+-- Representa a área total ocupada pelos Lounges de cada Discoteca
+CREATE VIEW AreaLounge AS
+SELECT idDiscoteca, SUM(Lounge.areaEspaco) AS totalAreaLounge 
+FROM Lounge 
+GROUP BY (idDiscoteca);
 
-/*SELECT Lounge.idDiscoteca, SUM(Lounge.areaEspaco) AS totalAreaLounge, SUM(CaixaPagamento.areaEspaco) AS totalAreaCaixa, SUM(Bengaleiro.areaEspaco) AS totalAreaBengaleiro, 
-SUM(Pista.areaEspaco) AS totalAreaPista 
-FROM Lounge JOIN CaixaPagamento USING(idDiscoteca) JOIN Bengaleiro USING(idDiscoteca) JOIN Pista USING(idDiscoteca)*/
+-- Representa a área total ocupada pelas Caixas de cada Discoteca
+CREATE VIEW AreaCaixa AS
+SELECT idDiscoteca, SUM(CaixaPagamento.areaEspaco) AS totalAreaCaixa 
+FROM CaixaPagamento 
+GROUP BY (idDiscoteca);
+
+-- Representa a área total ocupada pelos Bengaleiros de cada Discoteca
+CREATE VIEW AreaBengaleiro AS
+SELECT idDiscoteca, SUM(Bengaleiro.areaEspaco) AS totalAreaBengaleiro 
+FROM Bengaleiro 
+GROUP BY (idDiscoteca);
+
+-- Representa a área total ocupada pelas Pistas de cada Discoteca
+CREATE VIEW AreaPista AS
+SELECT idDiscoteca, SUM(Pista.areaEspaco) AS totalAreaPista  
+FROM Pista 
+GROUP BY (idDiscoteca);
+
+-- Representa a área total ocupada por todos os espaços de cada Discoteca
+CREATE VIEW AreaOcupada AS
+SELECT idDiscoteca, (totalAreaLounge + totalAreaCaixa + totalAreaBengaleiro + totalAreaPista) AS areaOcupada
+FROM AreaLounge NATURAL JOIN AreaCaixa NATURAL JOIN areaBengaleiro NATURAL JOIN areaPista;
+
+-- Apresenta as áreas ocupadas, totais e livres de cada Discoteca
+SELECT idDiscoteca, areaOcupada, areaTotal, (areaTotal - areaOcupada) AS areaLivre 
+FROM AreaOcupada JOIN Discoteca 
+WHERE Discoteca.id = areaOcupada.idDiscoteca;
