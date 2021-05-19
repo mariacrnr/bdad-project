@@ -1,4 +1,4 @@
--- Número de total de membros VIP e regular de todas as discotecas
+-- Número de total de membros VIP e regulares de todas as discotecas
 
 .mode	columns
 .headers	on
