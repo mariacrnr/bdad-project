@@ -1,7 +1,11 @@
--- Nome dos 3 funcionários do Staff Geral que trabalham nas caixas de pagamento com maior salário, ordenados por ordem decrescente.
+-- Nome e salário dos 5 funcionários mais bem pagos do Staff Geral que trabalham nas Caixas de Pagamento, ordenados por ordem decrescente.
 
 .mode	columns
 .headers	on
 .nullvalue	NULL
 
--- SELECT * FROM StaffGeral NATURAL JOIN Funcionario;
+SELECT nome, salario
+FROM StaffGeral NATURAL JOIN Funcionario
+    JOIN CaixaStaffGeral 
+WHERE CaixaStaffGeral.idStaff = StaffGeral.id
+ORDER BY salario DESC LIMIT 5;
