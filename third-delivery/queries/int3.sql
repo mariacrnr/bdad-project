@@ -1,5 +1,4 @@
 -- Área de espaço livre (não ocupado pelas zonas) em cada discoteca
--- NOTA: Dizia para preferir joins a subqueries mas aqui não sei se dá para fazer com joins, procurar maneira ?? ASS MARIA
 
 .mode	columns
 .headers	on

@@ -1607,7 +1607,7 @@ INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VA
 ('Sara Ribeiro', 923547587, 85758957, 'Avenida de Tires, Lousada', 1000, 3), -- 52
 ('Mateus Matias', 916875847, 52565758, 'Praça do Porto, Leça da Palmeira', 1800, 3), -- 53
 ('Matilde Matias', 923544587, 85257689, 'Rua dos Cordelinhos, Marco de Canaveses', 1500, 3), -- 54
-('António Alves', 911525687, 84757841, 'Praça das Tristezas, Ofir', 900, 3), -- 55
+('António Alves', 911525687, 84757841, 'Praça das Tristezas, Matosinhos', 900, 3), -- 55
 ('Luana Salgado', 961458748, 85645239, 'Praça do Sofrimento, Matosinhos', 1000, 3), -- 56
 ('Isla Trancoso', 968758787, 85417598, 'Estrada dos Mártires, Porto', 1000, 3), -- 57
 ('Marta Miranda', 964758157, 12458578, 'Avenida das Bolas, Paços de Ferreira', 1100, 3), -- 58
@@ -1655,7 +1655,7 @@ INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VA
 ('Jéssica Nogueira', 912458747, 35245857, 'Avenida da Ribeira, Vila do Conde', 1200, 4), -- 95
 ('André Fonte', 963214400, 12454090, 'Praça 3 de Abril, Vilar do Pinheiro' , 1000, 4), -- 96
 ('Luísa Costa', 913287055, 45613387, 'Rua de São Paulo, Moreira de Cónegos', 1000, 4), -- 97
-('Fabiana Gomes', 910252049, 10254452, 'Estrada Longa, Longra', 1100, 4), -- 98
+('Fabiana Gomes', 910252049, 10254452, 'Estrada Longa, Matosinhos', 1100, 4), -- 98
 -- Staff
 ('Tómas Ferreira', 911295294, 12452636, 'Rua da Montanha, Trofa', 800, 4), -- 99
 ('Vasco Fernandes', 923583413, 25437134, 'Avenida 21 de Novembro, Fradelos', 700, 4), -- 100
@@ -1685,18 +1685,21 @@ INSERT INTO Funcionario (nome, nrTelemovel, BI, morada, salario, idDiscoteca) VA
 INSERT INTO Hierarquia (idSubalterno, idGerente) VALUES
 -- Funcionários Forte S. João
 -- Seguranças
+(2, NULL),
 (1, 2),
 (3, 2),
-(4, 2),
-(5, 2),
+(4, 1),
+(5, 1),
 (6, 2),
 -- Bartender
+(7, NULL),
 (8, 7),
 (9, 7),
-(10, 7),
+(10, 9),
 (11, 7),
-(12, 7),
+(12, 9),
 -- Staff Geral
+(16, NULL),
 (13, 16),
 (14, 16),
 (15, 16),
@@ -1704,117 +1707,129 @@ INSERT INTO Hierarquia (idSubalterno, idGerente) VALUES
 
 -- Funcionários Via Rápida
 -- Seguranças
+(19, NULL),
 (18, 19),
 (20, 19),
 
 -- Bartender
+(24, NULL),
 (21, 24),
-(22, 24),
+(22, 23),
 (23, 24),
-(25, 24),
+(25, 23),
 (26, 24),
 
 -- Staff Geral
+(35, NULL),
 (27, 35),
 (28, 35),
 (29, 35),
-(30, 35),
+(30, 29),
 (31, 35),
-(32, 35),
-(33, 35),
+(32, 31),
+(33, 31),
 (34, 35),
-(36, 35),
+(36, 29),
 
 -- Funcionários Pacha
 -- Seguranças
+(43, NULL),
 (37, 43),
 (38, 43),
-(39, 43),
-(40, 43),
-(41, 43),
+(39, 38),
+(40, 38),
+(41, 38),
 (42, 43),
 (44, 43),
 (45, 43),
-(46, 43),
-(47, 43),
+(46, 45),
+(47, 45),
 (48, 43),
 
 -- Bartender
+(53, NULL),
 (49, 53),
-(50, 53),
+(50, 61),
 (51, 53),
 (52, 53),
 (54, 53),
 (55, 53),
-(56, 53),
-(57, 53),
-(58, 53),
-(59, 53),
+(56, 54),
+(57, 54),
+(58, 57),
+(59, 57),
 (60, 53),
 (61, 53),
 (62, 53),
-(63, 53),
+(63, 61),
 (64, 53),
 
 -- Staff Geral
+(77, NULL),
 (65, 77),
 (66, 77),
 (67, 77),
-(68, 77),
-(69, 77),
-(70, 77),
-(71, 77),
-(72, 77),
-(73, 77),
+(68, 67),
+(69, 67),
+(70, 67),
+(71, 67),
+(72, 67),
+(73, 67),
 (74, 77),
 (75, 77),
 (76, 77),
 (78, 77),
-(79, 77),
-(80, 77),
+(79, 75),
+(80, 75),
 (81, 77),
 (82, 77),
 (83, 77),
-(84, 77),
-(85, 77),
-(86, 77),
+(84, 83),
+(85, 83),
+(86, 83),
 
 -- Funcionários Pedra do Couto
 -- Seguranças
+(90, NULL),
 (87, 90),
 (88, 90),
 (89, 90),
-(91, 90),
-(92, 90),
+(91, 89),
+(92, 89),
 
 -- Bartender
+(95, NULL),
 (93, 95),
 (94, 95),
-(96, 95),
-(97, 95),
+(96, 93),
+(97, 96),
 (98, 95),
 
 -- Staff Geral
+(105, NULL),
 (99,105),
 (100,105),
 (101,105),
-(102,105),
-(103,105),
-(104,105),
+(102,106),
+(103,106),
+(104,106),
 (106,105),
 (107,105),
 
 -- Funcionários Gare
 -- Seguranças
+(109, NULL),
 (108, 109),
 
 -- Bartender
+(111, NULL),
 (110, 111),
 
 -- Staff
+(114, NULL),
 (112, 114),
-(113, 114),
-(115, 114),
+(113, 117),
+(115, 117),
 (116, 114),
 (117, 114);
 
@@ -1927,7 +1942,7 @@ INSERT INTO Bartender (id, nivelFormacao) VALUES
 -- Forte
 (7, 3), -- Chefe
 (8, 2),
-(9, 1),
+(9, 2),
 (10, 1),
 (11, 2),
 (12, 3),
@@ -1935,7 +1950,7 @@ INSERT INTO Bartender (id, nivelFormacao) VALUES
 -- Via Rápida
 (21, 1),
 (22, 2),
-(23, 1),
+(23, 3),
 (24, 3), -- Chefe
 (25, 2),
 (26, 1),
@@ -1946,7 +1961,7 @@ INSERT INTO Bartender (id, nivelFormacao) VALUES
 (51, 2),
 (52, 2),
 (53, 3), -- Chefe
-(54, 1),
+(54, 2),
 (55, 2),
 (56, 1),
 (57, 1),
@@ -1955,11 +1970,11 @@ INSERT INTO Bartender (id, nivelFormacao) VALUES
 (60, 1),
 (61, 2),
 (62, 3),
-(63, 1),
+(63, 2),
 (64, 1),
 
 -- Pedra do Couto
-(93, 1),
+(93, 2),
 (94, 1),
 (95, 3), -- Chefe
 (96, 2),

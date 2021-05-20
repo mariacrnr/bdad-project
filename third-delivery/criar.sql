@@ -59,8 +59,8 @@ create table Membro (
 
 create table Reserva (
     id INTEGER NOT NULL,
-    dia TEXT NOT NULL, 
-    hora TEXT NOT NULL,
+    dia TEXT NOT NULL CONSTRAINT FormatoDia CHECK (dia LIKE "__-__-____"), 
+    hora TEXT NOT NULL CONSTRAINT FormatoHora CHECK (hora LIKE "__:__"), 
     nrGarrafas INTEGER DEFAULT 0 CONSTRAINT NrGarrafasForaLimite CHECK (nrGarrafas >= 0),
     nrSofas INTEGER DEFAULT 0 CONSTRAINT NrSofasForaLimite CHECK (nrSofas >= 0 and nrSofas <= 5),
     BI INTEGER NOT NULL REFERENCES Pessoa 
@@ -180,7 +180,7 @@ create table Funcionario (
 create table Hierarquia (
     idSubalterno INTEGER NOT NULL REFERENCES Funcionario
                                     ON DELETE CASCADE ON UPDATE CASCADE,
-    idGerente INTEGER NOT NULL REFERENCES Funcionario 
+    idGerente INTEGER REFERENCES Funcionario 
                                 ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (idSubalterno)                            
 );
