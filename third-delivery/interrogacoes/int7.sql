@@ -1,4 +1,5 @@
--- Nome dos artistas e da respetiva pista do género trance, que atuaram entre as X e as Y horas, em discotecas com um número mínimo de 6 membros VIP.
+-- Nome dos artistas e da respetiva pista do género musical trance, 
+-- que atuaram entre a 1:00 e as 4:00 horas, em discotecas com um número mínimo de 6 membros VIP.
 .mode	columns
 .headers	on
 .nullvalue	NULL
