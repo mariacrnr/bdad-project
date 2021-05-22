@@ -41,7 +41,7 @@ CREATE VIEW AreaOcupada AS
 SELECT idDiscoteca, (totalAreaLounge + totalAreaCaixa + totalAreaBengaleiro + totalAreaPista) AS areaOcupada
 FROM AreaLounge NATURAL JOIN AreaCaixa NATURAL JOIN areaBengaleiro NATURAL JOIN areaPista;
 
--- Apresenta as áreas ocupadas, totais e livres de cada Discoteca
-SELECT idDiscoteca, areaOcupada, areaTotal, (areaTotal - areaOcupada) AS areaLivre 
+-- Apresenta as áreas livres de cada Discoteca
+SELECT idDiscoteca, (areaTotal - areaOcupada) AS areaLivre 
 FROM AreaOcupada JOIN Discoteca 
 WHERE Discoteca.id = areaOcupada.idDiscoteca;

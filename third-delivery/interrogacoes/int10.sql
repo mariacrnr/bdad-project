@@ -4,7 +4,7 @@
 .headers	on
 .nullvalue	NULL
 
--- Verifica as bebidas que não estão em nenhum em todos os bares, e apresenta as que não se encontram nessa tabela.
+-- Começa por verificar as bebidas que não estão em todos os bares, e apresenta as que não se encontram nessa tabela.
 SELECT nome, marca, stock
 FROM Bebida
 WHERE (nome, marca) NOT IN (
