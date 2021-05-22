@@ -850,7 +850,7 @@ INSERT INTO Bebida (nome, marca, stock, preco, teorAlcoolico) VALUES
 ('Whiskey', 'Jameson', 300, 8.0, 40.0),
 ('Whiskey', 'Red Label', 150, 10.0, 40.0),
 ('Whiskey', 'Cutty Sark', 150, 10.0, 40.0),
-('Whiskey', 'Bushmills', 60, 12.0, 40.0),
+('Whiskey', 'Bushmills', 60, 15.0, 40.0),
 
 ('Caipirinha', 'Casa', 400, 5.0, 30.0),
 ('Caipiblack', 'Casa', 200, 5.0, 15.0),

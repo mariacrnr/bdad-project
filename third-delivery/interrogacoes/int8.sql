@@ -1,8 +1,14 @@
--- Nome e licença dos seguranças que já trabalharam em todas as pistas do género de música 90s.
--- Não sei se compensa fazer pq é bue parecida com a última e já mexemos muito com funcionários e pistas.
+-- Nome, marca e preço da bebida mais cara para cada bar.
+
 .mode	columns
 .headers	on
 .nullvalue	NULL
 
---SELECT * 
---FROM Seguranca NATURAL JOIN Funcionario
+SELECT idBar, nome, marca, maiorPreco
+FROM (
+    SELECT idBar, nome, marca, MAX(preco) AS maiorPreco
+    FROM Bebida JOIN BarBebida USING(nome,marca)
+        JOIN Bar
+    WHERE Bar.id = BarBebida.idBar
+    GROUP BY (idBar)
+);
