@@ -5,11 +5,11 @@
 
 PRAGMA foreign_keys = ON;
 
-CREATE TRIGGER salário_por_posto_de_trabalho
+CREATE TRIGGER salario_por_posto_de_trabalho
     AFTER INSERT ON Hierarquia
     FOR EACH ROW
-    WHEN SELECT salario FROM Funcionario WHERE Funcionario.id = NEW.idGerente <
-        SELECT salario FROM Funcionario WHERE Funcionario.id = NEW.idSubalterno; 
+    WHEN (SELECT salario FROM Funcionario WHERE Funcionario.id = NEW.idGerente) <
+        (SELECT salario FROM Funcionario WHERE Funcionario.id = NEW.idSubalterno)
      -- Se salario de funcionario.idGerente menor que salario de funcionario.idSubalterno
 BEGIN
     UPDATE Funcionario
