@@ -1,12 +1,8 @@
--- When X occurs, check Y; if true, Z
+.mode columns
+.header on
+.nullvalue NULL
 
---CREATE TRIGGER [IF NOT EXISTS] trigger_name 
---   [BEFORE|AFTER|INSTEAD OF] [INSERT|UPDATE|DELETE] 
---   ON table_name
---   [WHEN condition]
---BEGIN
--- statements;
---END;
+PRAGMA foreign_keys = ON;
 
 --SELECT * FROM Reserva JOIN Lounge ON Lounge.idDiscoteca = NEW.idLounge.idDiscoteca <> (Membro.idDiscoteca com NEW.idReserva.BI)
 
