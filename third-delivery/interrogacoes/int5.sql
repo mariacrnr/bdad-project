@@ -30,6 +30,7 @@ WITH RECURSIVE BartenderHierarquiaOrdenada(id, idGerente, nome, salario) AS (
             BHO.id = BH.idGerente
 )
 
+-- Apresenta o id, id do Gerente, nome e salario dos bartenders que são gerentes.
 SELECT id, idGerente, nome, salario
 FROM BartenderHierarquiaOrdenada 
 WHERE id IN (
