@@ -4,4 +4,4 @@
 
 PRAGMA foreign_keys = ON;
 
-DROP TRIGGER IF EXISTS reservar_lounge_exclusivo_membros_VIP
+DROP TRIGGER IF EXISTS reservar_lounge_apenas_membros_VIP;

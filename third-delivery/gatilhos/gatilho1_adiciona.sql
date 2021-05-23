@@ -23,5 +23,5 @@ CREATE TRIGGER reservar_lounge_apenas_membros_VIP
 BEGIN
     DELETE FROM ReservaLounge
     WHERE ReservaLounge.idReserva = NEW.idReserva 
-    AND ReservaLounge.idLounge;
+    AND ReservaLounge.idLounge = NEW.idLounge;
 END;
