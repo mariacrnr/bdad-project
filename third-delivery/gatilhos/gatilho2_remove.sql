@@ -4,4 +4,4 @@
 
 PRAGMA foreign_keys = ON;
 
-DROP TRIGGER IF EXISTS --name
+DROP TRIGGER IF EXISTS atuacao_apenas_convidados;

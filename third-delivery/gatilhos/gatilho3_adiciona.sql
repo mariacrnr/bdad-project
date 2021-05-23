@@ -1,10 +1,10 @@
+-- Um subalterno não pode ter salário superior ao do seu gerente
 .mode columns
 .header on
 .nullvalue NULL
 
 PRAGMA foreign_keys = ON;
 
-/* Um subalterno não pode ter salário superior ao do seu gerente */
 CREATE TRIGGER salário_por_posto_de_trabalho
     AFTER INSERT ON Hierarquia
     FOR EACH ROW

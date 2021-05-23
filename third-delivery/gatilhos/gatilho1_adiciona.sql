@@ -1,10 +1,10 @@
+-- Apenas membros VIPs de uma discoteca podem reservar um lounge nessa discoteca 
 .mode columns
 .header on
 .nullvalue NULL
 
 PRAGMA foreign_keys = ON;
 
-/* Apenas membros VIPs de uma discoteca podem reservar um lounge nessa discoteca */
 CREATE TRIGGER reservar_lounge_exclusivo_membros_VIP
     AFTER INSERT ON ReservaLounge
     FOR EACH ROW
