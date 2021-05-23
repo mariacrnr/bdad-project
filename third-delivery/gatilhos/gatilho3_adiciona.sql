@@ -12,12 +12,13 @@
 CREATE TRIGGER salário_por_posto_de_trabalho
     AFTER INSERT ON Hierarquia
     FOR EACH ROW
-    WHEN NEW.idGerente.salario < NEW.idSubalterno.salario;
+    WHEN SELECT salario FROM Funcionario WHERE Funcionario.id = NEW.idGerente <
+        SELECT salario FROM Funcionario WHERE Funcionario.id = NEW.idSubalterno; 
      -- Se salario de funcionario.idGerente menor que salario de funcionario.idSubalterno
 BEGIN
     UPDATE Funcionario
-        SET salario = NEW.idSubalterno.salario
-        WHERE id = NEW.idGerente
+        SET salario = (SELECT salario FROM Funcionario WHERE Funcionario.id = NEW.idSubalterno)
+    WHERE id = NEW.idGerente;
 
     -- salario de funcionario.idGerente igual a salario de funcionario.idSubalterno
 END;
