@@ -1,5 +1,4 @@
 -- Nomes dos membros VIP que não têm reservas em nenhuma discoteca
--- NOTA: Para complicar fazer por discoteca NÃO SEI COMO ASS MARIA
 
 .mode	columns
 .headers	on
