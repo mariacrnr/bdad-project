@@ -14,7 +14,7 @@ CREATE TRIGGER reservar_lounge_exclusivo_membros_VIP
     WHEN (SELECT COUNT(*) FROM Membro 
             WHERE Membro.BI = (SELECT BI FROM Reserva WHERE id = NEW.idReserva) 
             AND Membro.idDiscoteca = (SELECT idDiscoteca FROM Lounge WHERE id = NEW.idLounge)
-            AND Membro.tipe = 'VIP')
+            AND Membro.tipo = 'VIP')
         = 0
 
 
