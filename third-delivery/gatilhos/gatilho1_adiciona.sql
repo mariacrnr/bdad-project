@@ -12,9 +12,9 @@ CREATE TRIGGER reservar_lounge_exclusivo_membros_VIP
     AFTER INSERT ON ReservaLounge
     FOR EACH ROW
     WHEN (SELECT COUNT(*) FROM Membro 
-            WHERE Membro.BI = (SELECT BI FROM Reserva WHERE id = NEW.idReserva;) 
-            AND Membro.idDiscoteca = (SELECT idDiscoteca FROM Lounge WHERE id = NEW.idLounge;)
-            AND Membro.tipe = 'VIP';)
+            WHERE Membro.BI = (SELECT BI FROM Reserva WHERE id = NEW.idReserva) 
+            AND Membro.idDiscoteca = (SELECT idDiscoteca FROM Lounge WHERE id = NEW.idLounge)
+            AND Membro.tipe = 'VIP')
         = 0
 
 
